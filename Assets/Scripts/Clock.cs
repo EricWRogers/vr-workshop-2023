@@ -123,7 +123,6 @@ public class Clock : MonoBehaviour
             case TIME_OF_DAY.FIVE:
                 timeString = "5:";
                 break;
-            
 
         }
         if(hourSpeed - clockTimer.TimeLeft < 10)
