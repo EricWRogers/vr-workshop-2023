@@ -20,15 +20,15 @@ public class Clock : MonoBehaviour
 {
     public Timer clockTimer;
     public TIME_OF_DAY CURRENT_TIME;
-    public int hourSpeed;
+    
     public TMP_Text timeText;
 
     private int clockTimeTracker = 0;
-    private int minutes = 0;
+    private int minutes = 60;
 
     void Start()
     {
-        clockTimer.StartTimer(hourSpeed, clockTimer.AutoRestart);
+        clockTimer.StartTimer(minutes, clockTimer.AutoRestart);
         Debug.Log("Test: " + clockTimer.TimeLeft);
         CURRENT_TIME = TIME_OF_DAY.NINE;
         timeText.text = "9:00 AM";
@@ -86,6 +86,7 @@ public class Clock : MonoBehaviour
             case 8:
                 CURRENT_TIME = TIME_OF_DAY.FIVE;
                 Debug.Log("It is 5 PM");
+                clockTimer.StopTimer();
                 break;
         }
         
@@ -122,14 +123,15 @@ public class Clock : MonoBehaviour
                 break;
             case TIME_OF_DAY.FIVE:
                 timeString = "5:";
+                minutes = 0;
                 break;
 
         }
-        if(hourSpeed - clockTimer.TimeLeft < 10)
+        if(minutes - clockTimer.TimeLeft < 10)
         {
             timeString += "0";
         }
-        timeString += (int)(hourSpeed - clockTimer.TimeLeft);
+        timeString += (int)(minutes - clockTimer.TimeLeft);
         timeText.text = timeString;
     }
 }
