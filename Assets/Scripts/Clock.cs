@@ -20,15 +20,16 @@ public class Clock : MonoBehaviour
 {
     public Timer clockTimer;
     public TIME_OF_DAY CURRENT_TIME;
-    public int hourSpeed;
+    
     public TMP_Text timeText;
 
     private int clockTimeTracker = 0;
-    private int minutes = 0;
+    private int minutes = 60;
+    private string timeOfDay = "";
 
     void Start()
     {
-        clockTimer.StartTimer(hourSpeed, clockTimer.AutoRestart);
+        clockTimer.StartTimer(minutes, clockTimer.AutoRestart);
         Debug.Log("Test: " + clockTimer.TimeLeft);
         CURRENT_TIME = TIME_OF_DAY.NINE;
         timeText.text = "9:00 AM";
@@ -53,39 +54,49 @@ public class Clock : MonoBehaviour
         {
             case 0:
                 CURRENT_TIME = TIME_OF_DAY.NINE;
+                timeOfDay = "AM";
                 Debug.Log("It is 9 AM");
                 break;
             case 1:
                 CURRENT_TIME = TIME_OF_DAY.TEN;
+                timeOfDay = "AM";
                 Debug.Log("It is 10 AM");
                 break;
             case 2:
                 CURRENT_TIME = TIME_OF_DAY.ELEVEN;
+                timeOfDay = "AM";
                 Debug.Log("It is 11 AM");
                 break;
             case 3:
                 CURRENT_TIME = TIME_OF_DAY.TWELVE;
+                timeOfDay = "PM";
                 Debug.Log("It is 12 PM");
                 break;
             case 4:
                 CURRENT_TIME = TIME_OF_DAY.ONE;
+                timeOfDay = "PM";
                 Debug.Log("It is 1 PM");
                 break;
             case 5:
                 CURRENT_TIME = TIME_OF_DAY.TWO;
+                timeOfDay = "PM";
                 Debug.Log("It is 2 PM");
                 break;
             case 6:
                 CURRENT_TIME = TIME_OF_DAY.THREE;
+                timeOfDay = "PM";
                 Debug.Log("It is 3 PM");
                 break;
             case 7:
                 CURRENT_TIME = TIME_OF_DAY.FOUR;
+                timeOfDay = "PM";
                 Debug.Log("It is 4 PM");
                 break;
             case 8:
                 CURRENT_TIME = TIME_OF_DAY.FIVE;
+                timeOfDay = "PM";
                 Debug.Log("It is 5 PM");
+                clockTimer.StopTimer();
                 break;
         }
         
@@ -122,14 +133,15 @@ public class Clock : MonoBehaviour
                 break;
             case TIME_OF_DAY.FIVE:
                 timeString = "5:";
+                minutes = 0;
                 break;
 
         }
-        if(hourSpeed - clockTimer.TimeLeft < 10)
+        if(minutes - clockTimer.TimeLeft < 10)
         {
             timeString += "0";
         }
-        timeString += (int)(hourSpeed - clockTimer.TimeLeft);
+        timeString += (int)(minutes - clockTimer.TimeLeft) + " " + timeOfDay;
         timeText.text = timeString;
     }
 }
