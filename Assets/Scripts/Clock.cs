@@ -25,6 +25,7 @@ public class Clock : MonoBehaviour
 
     private int clockTimeTracker = 0;
     private int minutes = 60;
+    private string timeOfDay = "";
 
     void Start()
     {
@@ -53,38 +54,47 @@ public class Clock : MonoBehaviour
         {
             case 0:
                 CURRENT_TIME = TIME_OF_DAY.NINE;
+                timeOfDay = "AM";
                 Debug.Log("It is 9 AM");
                 break;
             case 1:
                 CURRENT_TIME = TIME_OF_DAY.TEN;
+                timeOfDay = "AM";
                 Debug.Log("It is 10 AM");
                 break;
             case 2:
                 CURRENT_TIME = TIME_OF_DAY.ELEVEN;
+                timeOfDay = "AM";
                 Debug.Log("It is 11 AM");
                 break;
             case 3:
                 CURRENT_TIME = TIME_OF_DAY.TWELVE;
+                timeOfDay = "PM";
                 Debug.Log("It is 12 PM");
                 break;
             case 4:
                 CURRENT_TIME = TIME_OF_DAY.ONE;
+                timeOfDay = "PM";
                 Debug.Log("It is 1 PM");
                 break;
             case 5:
                 CURRENT_TIME = TIME_OF_DAY.TWO;
+                timeOfDay = "PM";
                 Debug.Log("It is 2 PM");
                 break;
             case 6:
                 CURRENT_TIME = TIME_OF_DAY.THREE;
+                timeOfDay = "PM";
                 Debug.Log("It is 3 PM");
                 break;
             case 7:
                 CURRENT_TIME = TIME_OF_DAY.FOUR;
+                timeOfDay = "PM";
                 Debug.Log("It is 4 PM");
                 break;
             case 8:
                 CURRENT_TIME = TIME_OF_DAY.FIVE;
+                timeOfDay = "PM";
                 Debug.Log("It is 5 PM");
                 clockTimer.StopTimer();
                 break;
@@ -131,7 +141,7 @@ public class Clock : MonoBehaviour
         {
             timeString += "0";
         }
-        timeString += (int)(minutes - clockTimer.TimeLeft);
+        timeString += (int)(minutes - clockTimer.TimeLeft) + " " + timeOfDay;
         timeText.text = timeString;
     }
 }
