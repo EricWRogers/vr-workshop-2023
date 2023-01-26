@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnergyScoreManager : MonoBehaviour
+public class EnergyManager : MonoBehaviour
 {
-    public static EnergyScoreManager instance;
+    public static EnergyManager instance;
 
     public string sceneName;
     public int score = 0;
