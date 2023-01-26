@@ -25,7 +25,7 @@ public class Event : MonoBehaviour
         isActive = true;
     }
 
-    protected virtual void PerformEvent()
+    public virtual void PerformEvent()
     {
         StartEvent();
     }
