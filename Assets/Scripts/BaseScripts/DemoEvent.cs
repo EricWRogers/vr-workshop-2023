@@ -24,7 +24,7 @@ public class SwapObjects : Event
     /// PerformEvent is a function that you inherit from the Event class
     /// Always make sure to include at the very beginning the a call to the version of the function that exists in the base class like on line 29: 'base.PerformEvent();'
     /// </summary>
-    protected override void PerformEvent()
+    public override void PerformEvent()
     {
         //Always make sure this base call comes first.
         base.PerformEvent();
