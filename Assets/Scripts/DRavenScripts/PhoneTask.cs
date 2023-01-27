@@ -18,7 +18,7 @@ public class PhoneTask : MonoBehaviour
 
 }
 
-public class CallTimer: MonoBehavior
+public class CallTimer: MonoBehaviour
 {
     private void OnTriggerEvent(Collider other)
     {
