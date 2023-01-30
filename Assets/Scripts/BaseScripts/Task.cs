@@ -17,16 +17,32 @@ public class Task : MonoBehaviour
     public string taskName;
     [TextArea]
     public string taskDescription;
-    private TaskEvent onComplete = new TaskEvent();
+    public int requiredAmount;
+
+    [HideInInspector]
+    public TaskEvent onComplete = new TaskEvent();
+    [HideInInspector]
+    public UnityEvent onTaskUpdated = new UnityEvent();
+    [HideInInspector]
+    public int currentAmount = 0;
 
 
     /// <summary>
     /// Call this function when the criteria for completing the given task is met.
     /// </summary>
     /// <param name="task">Pass in the Task that calls this function.</param>
-    protected virtual void CompleteTask(Task task)
+    public virtual void CompleteTask(Task task)
     {
         onComplete.Invoke(task);
         //task ui will listen for when an event is completed and update the ui accordingly with the given task
+    }
+
+    /// <summary>
+    /// Call this function when you increment the amount of a task the player has done.
+    /// </summary>
+    public virtual void UpdateTask()
+    {
+        currentAmount++;    //increases the current amount of the task completed.
+        onTaskUpdated.Invoke(); //invokes the event that the UI listens to.
     }
 }

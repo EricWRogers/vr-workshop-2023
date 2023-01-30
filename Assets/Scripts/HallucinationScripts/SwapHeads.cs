@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwapHeads : Event
+public class SwapHeads : HallucinationEvent
 {
     public GameObject originalHead;
     public GameObject newHead;
@@ -12,13 +12,13 @@ public class SwapHeads : Event
         Debug.Log("AAAAAAAAAAAAAAAAA");
     }
 
-    public override void PerformEvent()
+    public override void PerformHallucinationEvent()
     {
-        base.PerformEvent();
+        base.PerformHallucinationEvent();
 
         originalHead.SetActive(false);
         newHead.SetActive(true);
 
-        FinishEvent();
+        FinishHallucinationEvent();
     }
 }

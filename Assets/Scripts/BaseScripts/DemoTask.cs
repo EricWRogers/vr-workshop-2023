@@ -17,6 +17,15 @@ public class Shredder : MonoBehaviour
     [HideInInspector]
     //Unity events are used to trigger certain functions that are listeners when the event is invoked
     public UnityEvent shreddedEvent = new UnityEvent();
+    //This class needs a reference to the task it's involved with so it can call some events
+    private ShredPaper task;
+
+    //Start is a built in unity function that is called before the first frame of the game
+    private void Start()
+    {
+        //This is one way to find a reference to the task since there should only be one version of the script in the scene
+        task = FindObjectOfType<ShredPaper>();
+    }
 
     /// <summary>
     /// Whenever a paper collides with the shredder, this function will be called to handle what comes next
@@ -24,8 +33,10 @@ public class Shredder : MonoBehaviour
     public void ShredPaper()
     {
         numShredded++;
+        //You call this event whenever you update the amount of a task that has been completed. In this case since a paper has been shredded you increase this.
+        task.UpdateTask();
         //This is how you invoke a Unity Event which will now call all functions that are listeners of this event.
-        //The only listener here is on line 73 in the ShredPaper class
+        //The only listener of the shreddedEvent is on line 83 in the ShredPaper class
         shreddedEvent.Invoke();
     }
 }
@@ -47,7 +58,7 @@ public class Paper : MonoBehaviour
             //finds the Shredder script that is on the shredder game object the paper collided with
             //and tells it to shred the paper
             other.GetComponent<Shredder>().ShredPaper();
-            //gameObject is a reference to the game object this script resides on.
+            //gameObject is a reference to the GameObject this script resides on.
             //We destroy it here to give the illusion that the paper was shredded.
             Destroy(gameObject);
         }
@@ -56,14 +67,11 @@ public class Paper : MonoBehaviour
 
 /// <summary>
 /// Demonstrative example of a task script you would create, which in this case is a task to shred x amount of paper.
-/// Note that we inherit from Task instead of MonoBehaviour on line 61.
+/// Note that we inherit from Task instead of MonoBehaviour on line 72.
 /// </summary>
 public class ShredPaper : Task
 {
-    //This is public so we can adjust later in the editor as needed.
-    public int requiredAmountOfShreds = 10;
-
-    //This is to hold a reference to the shredder. Reference set on line 69
+    //This is to hold a reference to the shredder. Reference set on line 80
     private Shredder shredder;
 
     private void Start()
@@ -81,8 +89,8 @@ public class ShredPaper : Task
     /// </summary>
     private void ManageTask()
     {
-        //simple check that will be made every time a paper is shredded.
-        if (shredder.numShredded >= requiredAmountOfShreds)
+        //simple check that will be made every time a paper is shredded. requiredAmount is inherited from Task
+        if (shredder.numShredded >= requiredAmount)
         {
             //This function is not defined within the ShredPaper class but inside of the Task class which it inherits from.
             //No matter what task you are working on, it is INCREDIBLY important that you call this function whenever the completion criteria is met.
