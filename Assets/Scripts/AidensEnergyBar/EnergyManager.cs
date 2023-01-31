@@ -7,7 +7,7 @@ public class EnergyManager : MonoBehaviour
     public static EnergyManager instance;
 
     public string sceneName;
-    public int score = 0;
+    public float score = 0;
     public EnergyBar energyBar;
 
     void Awake()
@@ -18,14 +18,19 @@ public class EnergyManager : MonoBehaviour
             Destroy(this);
     }
 
-    public void AddPoints(int amount)
+    public void AddPoints(float amount)
     {
         score += amount;
         energyBar.slider.value = score;
     }
 
-    //public void GameOver()
-    //{
-    //    GameManager.instance.loadScene(sceneName);
-    //}
+    public Tier GetTier()
+    {
+        if (energyBar.slider.value <= 1 && energyBar.slider.value >= 0.67)
+            return Tier.Low;
+        if (energyBar.slider.value <= .66 && energyBar.slider.value >= .34)
+            return Tier.Medium;
+        if (energyBar.slider.value <= .34 && energyBar.slider.value >= .00)
+            return Tier.High;
+    }
 }
