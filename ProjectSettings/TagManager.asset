@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Holdable
   - Whiteboard
+  - Window
+  - ClickPoint
   layers:
   - Default
   - TransparentFX

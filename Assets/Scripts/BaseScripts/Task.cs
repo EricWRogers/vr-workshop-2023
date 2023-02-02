@@ -25,6 +25,8 @@ public class Task : MonoBehaviour
     public UnityEvent onTaskUpdated = new UnityEvent();
     [HideInInspector]
     public int currentAmount = 0;
+    [HideInInspector]
+    public string currentText;
 
 
     /// <summary>
