@@ -209,9 +209,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1379670030}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -592,14 +592,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1399686096}
-        m_TargetAssemblyTypeName: EnergyScoreManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: EnergyManager, Assembly-CSharp
         m_MethodName: AddPoints
-        m_Mode: 3
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
-          m_FloatArgument: 0
+          m_IntArgument: 0
+          m_FloatArgument: -0.01
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  score: 100
+  score: 1
   energyBar: {fileID: 222261485}
 --- !u!4 &1399686097
 Transform:
