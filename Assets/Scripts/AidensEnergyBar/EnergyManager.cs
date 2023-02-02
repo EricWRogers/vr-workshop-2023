@@ -32,5 +32,6 @@ public class EnergyManager : MonoBehaviour
             return Tier.Medium;
         if (energyBar.slider.value <= .34 && energyBar.slider.value >= .00)
             return Tier.High;
+        return Tier.Low;
     }
 }
