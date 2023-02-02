@@ -30,4 +30,10 @@ public class AppStatusController : MonoBehaviour
         statusBar.rectTransform.sizeDelta = new Vector2(20f, statusBar.rectTransform.sizeDelta.y);
         isActive = false;
     }
+
+    public void UpdateStatus(bool value)
+    {
+        isActive = value;
+        AdjustStatus();
+    }
 }

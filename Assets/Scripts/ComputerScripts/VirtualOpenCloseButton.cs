@@ -13,20 +13,12 @@ public class VirtualOpenCloseButton : VirtualButton
         window.GetComponentInChildren<VirtualCloseButton>().onClick.AddListener(DestroyThis);
     }
 
-    private void Update()
-    {
-        //Debug.Log(isActive);
-    }
-
     public override void ClickBehavior()
     {
         base.ClickBehavior();
 
-        Debug.Log(isActive);
-
         if (!isActive)
         {
-            Debug.Log("IN THE INACTIVE SECTION");
             isActive = true;
             window.SetActive(true);
             return;
