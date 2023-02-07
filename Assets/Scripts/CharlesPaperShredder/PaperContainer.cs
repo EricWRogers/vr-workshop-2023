@@ -6,9 +6,17 @@ public class PaperContainer : MonoBehaviour
 {
     public int paperAmount;
     public GameObject paper;
+    PaperShredder shredder;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
+    {
+        shredder = FindObjectOfType<PaperShredder>();
+        paperAmount = shredder.shredAmount;
+        CreatePaper();
+    }
+
+    public void startTask()
     {
         CreatePaper();
     }
@@ -18,6 +26,7 @@ public class PaperContainer : MonoBehaviour
     {
         for(int i=1; i<=paperAmount; i++)
         {
+            GameObject papermulti = Instantiate(paper);
         }
     }
 
