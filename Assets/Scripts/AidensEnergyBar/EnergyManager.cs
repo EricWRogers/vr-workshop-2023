@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnergyManager : MonoBehaviour
 {
     public static EnergyManager instance;
+    private CoffeeCup coffeeCup;
 
     public string sceneName;
     public float score = 0;
@@ -16,6 +17,12 @@ public class EnergyManager : MonoBehaviour
             instance = this;
         else
             Destroy(this);
+    }
+
+    void Start()
+    {
+        coffeeCup = GameObject.FindObjectOfType<CoffeeCup>();
+        coffeeCup.onDrink.AddListener(AddPoints);
     }
 
     public void AddPoints(float amount)
@@ -33,5 +40,10 @@ public class EnergyManager : MonoBehaviour
         if (energyBar.slider.value <= .34 && energyBar.slider.value >= .00)
             return Tier.High;
         return Tier.Low;
+    }
+
+    public void GameOver()
+    {
+
     }
 }
