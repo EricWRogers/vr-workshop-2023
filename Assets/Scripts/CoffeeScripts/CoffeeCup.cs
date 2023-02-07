@@ -5,11 +5,14 @@ using System.Runtime.InteropServices.ComTypes;
 
 public class CoffeeCup : MonoBehaviour
 {
-    public float coffeDrinkTime;
+    public float coffeeDrinkTime;
     public float CoffeeAmount = 0f;
     public bool FillingCoffee = false;
     public bool CupIsEmpty = true;
     public Rigidbody rigidbody;
+    public GameObject Coffee;
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class CoffeeCup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -32,24 +35,26 @@ public class CoffeeCup : MonoBehaviour
             }
             else 
             {
-                CoffeeAmount = 100f;
+                CoffeeAmount /*+*/= /*Time.deltaTime * coffeeDrinkTime*/100f;
                 CupIsEmpty = false;
                 Debug.Log("Refilling Coffee");
+                Coffee.SetActive(true);
             }
            
             
 
         }
-        //destroys Enemy when hit
+        
         if (collision.CompareTag("Player"))
         {
             if (CupIsEmpty == false)
             {
-                CoffeeAmount /*-*/= /*Time.deltaTime * coffeeDrinkTime*/0;
+                CoffeeAmount /*-*/= /*Time.deltaTime * coffeeDrinkTime*/0f;
                 Debug.Log("Drinking Coffee");
                 if (CoffeeAmount == 0f)
                 {
                     CupIsEmpty = true;
+                    Coffee.SetActive(false);
                 }
             }
             
