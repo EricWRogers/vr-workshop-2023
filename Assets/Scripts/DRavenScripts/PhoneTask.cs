@@ -54,13 +54,16 @@ public class CallTask : PhoneTask
     
 
     private PhoneTask phone;
+    private PhoneTask Player;
 
     private void Start()
     {
        
         phone = FindObjectOfType<PhoneTask>();
+        Player = FindObjectOfType<PhoneTask>();
        
         phone.phoneEvent.AddListener(ManageTask);
+        Player.phoneEvent.AddListener(ManageTask);
     }
 
     private void ManageTask()
@@ -69,7 +72,6 @@ public class CallTask : PhoneTask
         if (phone.secondsHeld == 4)
         {
             CompleteTask(this);
-            secondsHeld -= 4;
 
             Debug.Log("Phone Answered.");
         }
