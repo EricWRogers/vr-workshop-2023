@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Holdable
   - Whiteboard
+  - CoffeeMaker
+  - Shredder
   layers:
   - Default
   - TransparentFX
