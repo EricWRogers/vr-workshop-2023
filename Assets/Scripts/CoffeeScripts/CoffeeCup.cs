@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using System.Runtime.InteropServices.ComTypes;
+
+[System.Serializable]
+public class coffeeEvent : UnityEvent<float> {}
 
 public class CoffeeCup : MonoBehaviour
 {
@@ -11,6 +15,7 @@ public class CoffeeCup : MonoBehaviour
     public bool CupIsEmpty = true;
     public Rigidbody rigidbody;
     public GameObject Coffee;
+    public coffeeEvent onDrink = new coffeeEvent();
 
    
     // Start is called before the first frame update
@@ -51,6 +56,7 @@ public class CoffeeCup : MonoBehaviour
             {
                 CoffeeAmount /*-*/= /*Time.deltaTime * coffeeDrinkTime*/0f;
                 Debug.Log("Drinking Coffee");
+                onDrink.Invoke(CoffeeAmount);
                 if (CoffeeAmount == 0f)
                 {
                     CupIsEmpty = true;
