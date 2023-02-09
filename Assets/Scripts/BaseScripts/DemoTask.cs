@@ -44,7 +44,7 @@ public class Shredder : MonoBehaviour
 /// <summary>
 /// This an example of a Paper script that would be on a seperate paper game object
 /// </summary>
-public class Paper : MonoBehaviour
+public class DemoPaper : MonoBehaviour
 {
     /// <summary>
     /// Built-in Unity function to detect collisions. In this case between the paper and the shredder.
