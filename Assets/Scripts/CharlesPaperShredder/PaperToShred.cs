@@ -16,6 +16,7 @@ public class PaperToShred : MonoBehaviour
         if(other.CompareTag("Shredder"))
         {
             shredder.shredded++;
+            shredder.UpdateTask();
             Destroy(gameObject);
         }
     }

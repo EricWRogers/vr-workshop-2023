@@ -16,6 +16,9 @@ public class PaperShredder : Task
     // Update is called once per frame
     void Update()
     {
-        
+        if(shredded==shredAmount)
+        {
+            CompleteTask(this);
+        }
     }
 }
