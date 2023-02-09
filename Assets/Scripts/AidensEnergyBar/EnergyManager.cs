@@ -7,6 +7,7 @@ public class EnergyManager : MonoBehaviour
 {
     public static EnergyManager instance;
     private CoffeeCup coffeeCup;
+    public UnityEvent gameOver;
 
     public string sceneName;
     public float score = 0;
@@ -45,6 +46,9 @@ public class EnergyManager : MonoBehaviour
 
     public void GameOver()
     {
-        
+        if(energyBar.slider.value == 0f)
+        {
+            Debug.Log("Game Over");
+        }
     }
 }
