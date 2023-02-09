@@ -6,6 +6,8 @@ public class PaperContainer : MonoBehaviour
 {
     public int paperAmount;
     public GameObject paper;
+    public Vector3 location;
+    public Quaternion rotate;
     PaperShredder shredder;
 
     // Start is called before the first frame update
@@ -26,7 +28,7 @@ public class PaperContainer : MonoBehaviour
     {
         for(int i=1; i<=paperAmount; i++)
         {
-            GameObject papermulti = Instantiate(paper);
+            GameObject papermulti = Instantiate(paper, location+new Vector3(0f,0.075f*(i),0f), rotate);
         }
     }
 

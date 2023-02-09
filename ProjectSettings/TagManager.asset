@@ -8,6 +8,9 @@ TagManager:
   - Whiteboard
   - CoffeeMaker
   - Shredder
+  - Window
+  - ClickPoint
+  - Stapler
   layers:
   - Default
   - TransparentFX
