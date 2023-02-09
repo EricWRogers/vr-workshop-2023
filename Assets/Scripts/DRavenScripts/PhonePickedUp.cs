@@ -26,7 +26,7 @@ public class PhonePickedUp : Task
     {
         Debug.Log("Phone Held");
         phoneHeld = true;
-        while (other.CompareTag("Player")) && secondsHeld != 4
+        while (other.CompareTag("Player") && secondsHeld != 4)
         {
             
             secondsHeld += Time.deltaTime;
