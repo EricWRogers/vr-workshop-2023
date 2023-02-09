@@ -34,13 +34,13 @@ public class CoffeeCup : MonoBehaviour
     {
         if (collision.CompareTag("CoffeeMaker"))
         {
-            if(CoffeeAmount == 100f)
+            if(CoffeeAmount == 1.0f)
             {
                 Debug.Log("Cup is full");
             }
             else 
             {
-                CoffeeAmount /*+*/= /*Time.deltaTime * coffeeDrinkTime*/100f;
+                CoffeeAmount /*+*/= /*Time.deltaTime * coffeeDrinkTime*/1.0f;
                 CupIsEmpty = false;
                 Debug.Log("Refilling Coffee");
                 Coffee.SetActive(true);
@@ -54,14 +54,18 @@ public class CoffeeCup : MonoBehaviour
         {
             if (CupIsEmpty == false)
             {
-                CoffeeAmount /*-*/= /*Time.deltaTime * coffeeDrinkTime*/0f;
-                Debug.Log("Drinking Coffee");
-                onDrink.Invoke(CoffeeAmount);
                 if (CoffeeAmount == 0f)
                 {
                     CupIsEmpty = true;
                     Coffee.SetActive(false);
                 }
+                else
+                {
+                    CoffeeAmount /*-*/-= /*Time.deltaTime * coffeeDrinkTime*/0.25f;
+                    Debug.Log("Drinking Coffee");
+                    onDrink.Invoke(CoffeeAmount);
+                }
+               
             }
             
         }

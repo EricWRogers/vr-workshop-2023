@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PhoneTask : Task
+public class PhonePickedUp : Task
 {
     //[HideInInspector]
     public float secondsHeld = 0;
@@ -17,23 +17,23 @@ public class PhoneTask : Task
         phoneEvent.Invoke();
     }
 
-}
+    void Awake()
+    {
+        Debug.Log("hi");
+    }
 
-public class CallTimer : PhoneTask
-{
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log("Phone Held");
-
-        if (other.CompareTag("Player"))
+        phoneHeld = true;
+        while (other.CompareTag("Player")) && secondsHeld != 4
         {
-            phoneHeld = true;
+            
             secondsHeld += Time.deltaTime;
 
             Debug.Log("Phone Held");
         }
     }
-
 
     private void OnTriggerExit(Collider other)
     {
@@ -45,22 +45,53 @@ public class CallTimer : PhoneTask
             Debug.Log("Phone not held");
         }
     }
+
+}
+
+public class CallTimer : PhonePickedUp
+{
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Phone Held");
+        phoneHeld = true;
+        while (other.CompareTag("Player"))
+        {
+            
+            secondsHeld += Time.deltaTime;
+
+            Debug.Log("Phone Held");
+        }
+    }
+
+
+    private void OnTriggerExit(Collider other)
+    { 
+        phoneHeld = false;
+
+        if (other.CompareTag("Player"))
+        {
+           
+            secondsHeld = 0;
+
+            Debug.Log("Phone not held");
+        }
+    }
 }
 
 
 
-public class CallTask : PhoneTask
+public class CallTask : PhonePickedUp
 {
     
 
-    private PhoneTask phone;
-    private PhoneTask Player;
+    private PhonePickedUp phone;
+    private PhonePickedUp Player;
 
     private void Start()
     {
        
-        phone = FindObjectOfType<PhoneTask>();
-        Player = FindObjectOfType<PhoneTask>();
+        phone = FindObjectOfType<PhonePickedUp>();
+        Player = FindObjectOfType<PhonePickedUp>();
        
         phone.phoneEvent.AddListener(ManageTask);
         Player.phoneEvent.AddListener(ManageTask);
