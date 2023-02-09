@@ -7,6 +7,7 @@ TagManager:
   - Holdable
   - Whiteboard
   - CoffeeMaker
+  - Shredder
   - Window
   - ClickPoint
   - Stapler
@@ -20,7 +21,7 @@ TagManager:
   - Grabbable
   - 
   - 
-  - 
+  - Highlight
   - 
   - 
   - 
