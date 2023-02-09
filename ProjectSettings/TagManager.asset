@@ -7,6 +7,9 @@ TagManager:
   - Holdable
   - Whiteboard
   - CoffeeMaker
+  - Window
+  - ClickPoint
+  - Stapler
   layers:
   - Default
   - TransparentFX
