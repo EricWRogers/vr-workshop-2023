@@ -48,7 +48,8 @@ public class EnergyManager : MonoBehaviour
     {
         if(energyBar.slider.value == 0f)
         {
-            Debug.Log("Game Over");
+            //Debug.Log("Game Over");
+            gameOver.Invoke();
         }
     }
 }
