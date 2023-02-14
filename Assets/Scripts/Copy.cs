@@ -2,26 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Copy : MonoBehaviour
+public class Printer : MonoBehaviour
 {
-    public bool ReadyToCopy = false;
+    public bool ReadyToPrint = false;
     public Rigidbody rigidbody;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Printer")
         {
-            ReadyToCopy = true;
+            ReadyToPrint = true;
         }
 
-       
+        if (collision.gameObject.tag == "Player")
+        {
+
+        }
     }
 
     private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Printer")
         {
-            ReadyToCopy = false;
+            ReadyToPrint = false;
         }
     }
     // Start is called before the first frame update
