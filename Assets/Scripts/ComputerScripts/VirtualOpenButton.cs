@@ -26,4 +26,9 @@ public class VirtualOpenButton : VirtualButton
         window.SetActive(true);
         taskbarApp.GetComponentInChildren<AppStatusController>().UpdateStatus(false);   //seems counterintuitive but it's just the way open/close button works
     }
+
+    public void SetUnlaunched()
+    {
+        isLaunched = false;
+    }
 }
