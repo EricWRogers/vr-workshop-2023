@@ -10,7 +10,7 @@ public class EnergyManager : MonoBehaviour
     public UnityEvent gameOver;
 
     public string sceneName;
-    public float score = 0;
+    public float energyLeft = 0;
     public EnergyBar energyBar;
 
     void Awake()
@@ -29,8 +29,8 @@ public class EnergyManager : MonoBehaviour
 
     public void AddPoints(float amount)
     {
-        score += amount;
-        energyBar.slider.value = score;
+        energyLeft += amount;
+        energyBar.slider.value = energyLeft;
     }
 
     public Tier GetTier()
