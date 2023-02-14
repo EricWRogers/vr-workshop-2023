@@ -17,6 +17,7 @@ public class PaperToShred : MonoBehaviour
         {
             shredder.shredded++;
             shredder.UpdateTask();
+            shredder.shredPaperParticle();
             Destroy(gameObject);
         }
     }
