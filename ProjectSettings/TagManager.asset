@@ -12,6 +12,7 @@ TagManager:
   - ClickPoint
   - Stapler
   - Trash
+  - Printer
   layers:
   - Default
   - TransparentFX

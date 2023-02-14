@@ -5,10 +5,11 @@ using UnityEngine;
 public class Printer : MonoBehaviour
 {
     public bool ReadyToPrint = false;
+    public Rigidbody rigidbody;
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Document")
+        if (collision.gameObject.tag == "Printer")
         {
             ReadyToPrint = true;
         }
@@ -21,7 +22,7 @@ public class Printer : MonoBehaviour
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.tag == "Document")
+        if (collision.gameObject.tag == "Printer")
         {
             ReadyToPrint = false;
         }
