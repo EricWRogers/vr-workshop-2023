@@ -226,8 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3ee98fa0874f147be203220bc3d073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coffeDrinkTime: 0
+  coffeeDrinkTime: 0
   CoffeeAmount: 0
   FillingCoffee: 0
   CupIsEmpty: 1
   rigidbody: {fileID: 6906871964752085511}
+  Coffee: {fileID: 0}
+  onDrink:
+    m_PersistentCalls:
+      m_Calls: []
