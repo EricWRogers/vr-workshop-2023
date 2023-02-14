@@ -5,7 +5,10 @@ using UnityEngine;
 public class PaperShredder : Task
 {
     public int shredAmount = 5;
-    //[HideInInspector]
+    public GameObject paperParticle;
+    public Vector3 shredParticleLocation;
+    public Quaternion shredParticleRotation;
+    [HideInInspector]
     public int shredded = 0;
     // Start is called before the first frame update
     void Start()
@@ -20,5 +23,12 @@ public class PaperShredder : Task
         {
             CompleteTask(this);
         }
+    }
+
+    public IEnumerator shredPaperParticle()
+    {
+        GameObject shredDone = Instantiate(paperParticle, shredParticleLocation, shredParticleRotation);
+        yield return new WaitForSeconds(10);
+        Destroy(shredDone);
     }
 }
