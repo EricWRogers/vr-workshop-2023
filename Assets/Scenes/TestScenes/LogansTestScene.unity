@@ -787,6 +787,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354720076}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &377595934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 630019638, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+  m_PrefabInstance: {fileID: 8650424662485873487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a134ca04d903ed74ca7373b9819184b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &392080959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,6 +2230,17 @@ Transform:
   m_Father: {fileID: 2081770382}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &973736381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 323212939, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+  m_PrefabInstance: {fileID: 8650424662485873487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a134ca04d903ed74ca7373b9819184b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1102695389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,7 +2554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1428733173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3920,6 +3942,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 323212940, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: cc11533b143d16e40b565d45f9d4bdd8, type: 3}
+    - target: {fileID: 630019639, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: cc11533b143d16e40b565d45f9d4bdd8, type: 3}
+    - target: {fileID: 497092591709182321, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: hand
+      value: 
+      objectReference: {fileID: 377595934}
+    - target: {fileID: 3084475960113793164, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: hand
+      value: 
+      objectReference: {fileID: 973736381}
     - target: {fileID: 8650424662829020746, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
