@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -787,6 +787,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354720076}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &377595934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 630019638, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+  m_PrefabInstance: {fileID: 8650424662485873487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a134ca04d903ed74ca7373b9819184b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &392080959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,7 +1644,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3d86198530df689418503b2f8c3899ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2219,6 +2230,17 @@ Transform:
   m_Father: {fileID: 2081770382}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &973736381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 323212939, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+  m_PrefabInstance: {fileID: 8650424662485873487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a134ca04d903ed74ca7373b9819184b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1102695389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,7 +2309,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3d86198530df689418503b2f8c3899ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2532,7 +2554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1428733173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3212,6 +3234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888370017}
   - component: {fileID: 1888370016}
+  - component: {fileID: 1888370018}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3296,6 +3319,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1888370018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888370015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1918525850
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,66 +3942,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8650424662829020746, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_RaycastMask.m_Bits
-      value: 96
-      objectReference: {fileID: 0}
+    - target: {fileID: 323212940, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: cc11533b143d16e40b565d45f9d4bdd8, type: 3}
+    - target: {fileID: 630019639, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: cc11533b143d16e40b565d45f9d4bdd8, type: 3}
+    - target: {fileID: 497092591709182321, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: hand
+      value: 
+      objectReference: {fileID: 377595934}
+    - target: {fileID: 3084475960113793164, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: hand
+      value: 
+      objectReference: {fileID: 973736381}
     - target: {fileID: 8650424662829020746, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1837233152}
-    - target: {fileID: 8650424662829020748, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_LineWidth
-      value: 0.0061
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424662829020748, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.atime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424662829020748, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424662829020748, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424662829020748, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424662829020748, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424663402757735, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_RaycastMask.m_Bits
-      value: 96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424663402757737, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_LineWidth
-      value: 0.0061
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424663402757737, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.atime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424663402757737, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424663402757737, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424663402757737, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650424663402757737, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8650424663811897526, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_RootOrder
       value: 5
