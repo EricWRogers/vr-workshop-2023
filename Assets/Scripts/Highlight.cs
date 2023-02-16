@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Highlight : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int defaultMask;
+    private int highlightMask;
+    public GameObject interactableObject;
+
+    void awake()
     {
-        
+        defaultMask = LayerMask.NameToLayer("default");
+        highlightMask = LayerMask.NameToLayer("Hightlight");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HighlightObject()
     {
-        
+        interactableObject.layer = highlightMask;
+    }
+
+    public void DehighlightObject()
+    {
+        interactableObject.layer = defaultMask;
     }
 }
