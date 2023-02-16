@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6487621237881849888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6487621237881849889}
+  - component: {fileID: 6487621237881849917}
+  - component: {fileID: 1630796188}
+  - component: {fileID: 1630796191}
+  - component: {fileID: 1630796194}
+  - component: {fileID: 1630796197}
+  m_Layer: 0
+  m_Name: Tasks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6487621237881849889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621237881849888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6487621238526599105}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6487621237881849917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621237881849888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47f17bc234a2e34b9b02b7d6397773c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Send Emails
+  taskDescription: Do people even read these things?
+  requiredAmount: 1
+  completeParticles: {fileID: 4938095755617958529, guid: 2e79f16be10fbd14f8d5ef191f8db4aa, type: 3}
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTaskUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  currentAmount: 0
+  currentText: 
+--- !u!114 &1630796188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621237881849888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd79323493d753498ad67611c7cb16e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Empty Trashcan
+  taskDescription: Do I really have to?
+  requiredAmount: 8
+  completeParticles: {fileID: 4938095755617958529, guid: 2e79f16be10fbd14f8d5ef191f8db4aa, type: 3}
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTaskUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  currentAmount: 0
+  currentText: 
+--- !u!114 &1630796191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621237881849888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ddedb7ad939e143ac8b74cf4f93b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Shred Paper
+  taskDescription: Shredder go brrrrr.
+  requiredAmount: 5
+  completeParticles: {fileID: 4938095755617958529, guid: 2e79f16be10fbd14f8d5ef191f8db4aa, type: 3}
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTaskUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  currentAmount: 0
+  currentText: 
+--- !u!114 &1630796194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621237881849888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de9a51e1a7ae421aae1c6dddb998f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Deliver Pens
+  taskDescription: Why does the boss need so many?
+  requiredAmount: 5
+  completeParticles: {fileID: 4938095755617958529, guid: 2e79f16be10fbd14f8d5ef191f8db4aa, type: 3}
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTaskUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  currentAmount: 0
+  currentText: 
+--- !u!114 &1630796197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621237881849888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280ba27cd4a4ccf418827be9eab0a3ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Staple Papers
+  taskDescription: Do these even go together? Eh who cares.
+  requiredAmount: 5
+  completeParticles: {fileID: 4938095755617958529, guid: 2e79f16be10fbd14f8d5ef191f8db4aa, type: 3}
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTaskUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  currentAmount: 0
+  currentText: 
+--- !u!1 &6487621238526599111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6487621238526599105}
+  - component: {fileID: 6487621238526599104}
+  m_Layer: 0
+  m_Name: TaskManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6487621238526599105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621238526599111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6487621237881849889}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6487621238526599104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487621238526599111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e7b59235e417b40bc3958e0e3224c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tasks: []
+  taskUIGroup: {fileID: 0}
+  standardTextPrefab: {fileID: 8895895075981456524, guid: f7a78e97ad8305e4e9ea135656f355dc, type: 3}
+  taskUIElements: []
+  allUIElements: []

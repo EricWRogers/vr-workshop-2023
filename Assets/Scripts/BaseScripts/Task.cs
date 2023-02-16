@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Unity.XR.CoreUtils;
 
 /*
  * **NEVER** directly make a change to this script.
@@ -18,6 +19,7 @@ public class Task : MonoBehaviour
     [TextArea]
     public string taskDescription;
     public int requiredAmount;
+    public GameObject completeParticles;
 
     [HideInInspector]
     public TaskEvent onComplete = new TaskEvent();
@@ -37,6 +39,8 @@ public class Task : MonoBehaviour
     {
         onComplete.Invoke(task);
         //task ui will listen for when an event is completed and update the ui accordingly with the given task
+        //Instantiate(completeParticles, FindObjectOfType<XROrigin>().transform.position, Quaternion.identity);
+        FindObjectOfType<TaskManager>().tasks.Remove(task);
     }
 
     /// <summary>
@@ -46,5 +50,25 @@ public class Task : MonoBehaviour
     {
         currentAmount++;    //increases the current amount of the task completed.
         onTaskUpdated.Invoke(); //invokes the event that the UI listens to.
+    }
+    
+    /// <summary>
+    /// Same functionality as the normal UpdateTask but with a custom amount to increment/decrement.
+    /// </summary>
+    /// <param name="amount">Amount to add or subtract from the current amount. Add a negative to subtract.</param>
+    public virtual void UpdateTask(int amount)
+    {
+        currentAmount += amount;
+        onTaskUpdated.Invoke();
+    }
+
+    public virtual void SpawnFX(Vector3 position, Quaternion rotation)
+    {
+        Instantiate(completeParticles, position, rotation);
+    }
+
+    public virtual void SpawnFX(Vector3 position)
+    {
+        Instantiate(completeParticles, position, Quaternion.identity);
     }
 }

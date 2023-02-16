@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class Dropzone : MonoBehaviour
 {
-    public int currentPinNumber=0;
-    private PinTask PinTask;
+    private PenTask task;
     void Start()
     {
-        PinTask = FindObjectOfType<PinTask>();
+        task = FindObjectOfType<PenTask>();
     }
 
     private void OnTriggerEnter(Collider other){
-        if(!other.CompareTag("Pin"))
+        if(!other.CompareTag("Pen"))
             return;
-        currentPinNumber ++;
-        PinTask.UpdateTask();
+        task.UpdateTask();
 
-        if(currentPinNumber>=5)
-            PinTask.CompleteTask(PinTask);
+        if(task.currentAmount >= task.requiredAmount)
+        {
+            task.CompleteTask(task);
+            task.SpawnFX(transform.position);
+        }
     }
     private void OnTriggerExit(Collider other){
-        if(!other.CompareTag("Pin"))
+        if(!other.CompareTag("Pen"))
             return;
-        currentPinNumber--;
-        PinTask.UpdateTask();
+        task.UpdateTask(-1);
     }
 }

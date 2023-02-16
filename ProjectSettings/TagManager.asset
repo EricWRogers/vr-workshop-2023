@@ -15,6 +15,7 @@ TagManager:
   - Paper
   - Drawer
   - Printer
+  - Pen
   layers:
   - Default
   - TransparentFX
@@ -23,10 +24,10 @@ TagManager:
   - Water
   - UI
   - Grabbable
-  - 
+  - Player
   - 
   - Highlight
-  - 
+  - StapledPaper
   - 
   - 
   - 

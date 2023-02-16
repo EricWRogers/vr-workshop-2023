@@ -124,6 +124,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f0e04411-d53a-48d1-9297-625ac13279ae",
+                    "path": "<OculusTouchController>/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1ba0d397-2c68-4d13-a2ad-baa80d744adc",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",

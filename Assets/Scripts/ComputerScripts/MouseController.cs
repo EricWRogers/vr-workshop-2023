@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class MouseController : MonoBehaviour
 {
     public float speed = 10f;
+    public float trackingDistance = .5f;
+    public float maxAcceleration = 1f;
+
     private Rigidbody rb;
     private Vector3 input;
     private CursorController cursor;
@@ -63,13 +66,19 @@ public class MouseController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(input * speed * Time.deltaTime);
+        rb.AddForce(input * speed * Time.deltaTime, ForceMode.Force);
     }
 
     public Vector2 GetPhysicalDirection()
     {
-        if (rb.velocity.magnitude > .1f)
+        Debug.DrawRay(transform.position, Vector3.down * trackingDistance, Color.green);
+        if (rb.velocity.magnitude > .1f && Physics.Raycast(transform.position, Vector3.down, trackingDistance))
             return new Vector2(rb.velocity.x, rb.velocity.z);
         else return Vector2.zero;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Debug.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - trackingDistance, transform.position.z), Color.green);
     }
 }

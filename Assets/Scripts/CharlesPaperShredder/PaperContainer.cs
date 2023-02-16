@@ -4,37 +4,26 @@ using UnityEngine;
 
 public class PaperContainer : MonoBehaviour
 {
-    public int paperAmount;
     public GameObject paper;
     public Vector3 location;
     public Quaternion rotate;
-    PaperShredder shredder;
+    ShredPaperTask task;
 
     // Start is called before the first frame update
     void Awake()
     {
-        shredder = FindObjectOfType<PaperShredder>();
-        paperAmount = shredder.shredAmount;
-        CreatePaper();
-    }
-
-    public void startTask()
-    {
+        task = FindObjectOfType<ShredPaperTask>();
         CreatePaper();
     }
 
     // Used to create the paper for the paper shredder task.
     void CreatePaper()
     {
-        for(int i=1; i<=paperAmount; i++)
+        int amountOfPaper = FindObjectOfType<Staple_Task>().requiredAmount + task.requiredAmount;
+        amountOfPaper += 2; //buffer
+        for(int i = 1; i <= amountOfPaper; i++)
         {
-            GameObject papermulti = Instantiate(paper, location+new Vector3(0f,0.075f*(i),0f), rotate);
+            Instantiate(paper, transform.position + new Vector3(0f,0.075f*(i),0f), rotate);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

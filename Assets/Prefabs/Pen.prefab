@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4389742878133539081
+--- !u!1 &1140011264404560439
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4389742878133539090}
-  - component: {fileID: 4389742878133539093}
-  - component: {fileID: 4389742878133539092}
-  - component: {fileID: 4389742878133539095}
-  - component: {fileID: 4389742878133539091}
-  - component: {fileID: 1787873664646967724}
+  - component: {fileID: 5402521504959836424}
+  - component: {fileID: 7914597485603139528}
+  - component: {fileID: 7355101736650360623}
+  - component: {fileID: 5402521504959836427}
   m_Layer: 6
-  m_Name: Paper
-  m_TagString: Paper
+  m_Name: Model
+  m_TagString: Pen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4389742878133539090
+--- !u!4 &5402521504959836424
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4389742878133539081}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 5, z: 0}
-  m_LocalScale: {x: 0.37290087, y: 0.010216462, z: 0.51082313}
+  m_GameObject: {fileID: 1140011264404560439}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.019350052, z: 0}
+  m_LocalScale: {x: 0.0040430985, y: 0.0050274767, z: 0.008086197}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2592538160584570774}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4389742878133539093
+--- !u!33 &7914597485603139528
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4389742878133539081}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4389742878133539092
+  m_GameObject: {fileID: 1140011264404560439}
+  m_Mesh: {fileID: -6561623048535504736, guid: 436d9783eeb1e9b45aaf3650889c9192, type: 3}
+--- !u!23 &7355101736650360623
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4389742878133539081}
+  m_GameObject: {fileID: 1140011264404560439}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +62,12 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 753033b53c0fbc440b78a31104fbced9, type: 3}
+  - {fileID: 6034957751646507721, guid: 436d9783eeb1e9b45aaf3650889c9192, type: 3}
+  - {fileID: -4597107667637640440, guid: 436d9783eeb1e9b45aaf3650889c9192, type: 3}
+  - {fileID: -4612162990109294230, guid: 436d9783eeb1e9b45aaf3650889c9192, type: 3}
+  - {fileID: 5775865398287329665, guid: 436d9783eeb1e9b45aaf3650889c9192, type: 3}
+  - {fileID: -8255497921437555292, guid: 436d9783eeb1e9b45aaf3650889c9192, type: 3}
+  - {fileID: -1976799459468813334, guid: 436d9783eeb1e9b45aaf3650889c9192, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,42 +89,77 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4389742878133539095
-BoxCollider:
+--- !u!136 &5402521504959836427
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4389742878133539081}
+  m_GameObject: {fileID: 1140011264404560439}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4389742878133539091
+  m_Radius: 2.3994
+  m_Height: 72.31556
+  m_Direction: 1
+  m_Center: {x: 0.00000047683716, y: -2.645996, z: 0}
+--- !u!1 &2592538160584570775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2592538160584570774}
+  - component: {fileID: 2592538160584570768}
+  - component: {fileID: 2592538160584570769}
+  m_Layer: 6
+  m_Name: Pen
+  m_TagString: Pen
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2592538160584570774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592538160584570775}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -4.636, y: 4.43, z: -14.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5402521504959836424}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!54 &2592538160584570768
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4389742878133539081}
+  m_GameObject: {fileID: 2592538160584570775}
   serializedVersion: 2
-  m_Mass: 0.1
-  m_Drag: 0.1
+  m_Mass: 1
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &1787873664646967724
+--- !u!114 &2592538160584570769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4389742878133539081}
+  m_GameObject: {fileID: 2592538160584570775}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -195,7 +233,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
-  m_MovementType: 0
+  m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1

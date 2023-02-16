@@ -8,14 +8,15 @@ public class Staple_Task : Task
     private void Start()
     {
         stapler = FindObjectOfType<Stapler>();
-        stapler.StapleEvent.AddListener(ManageTask);
     }
-    private void ManageTask()
+    public override void UpdateTask()
     {
-        if (stapler.numStapled >= requiredAmount)
+        base.UpdateTask();
+
+        if (currentAmount >= requiredAmount)
         {
             CompleteTask(this);
-            Debug.Log("Task Done");
+            SpawnFX(stapler.transform.position);
         }
     }
 }

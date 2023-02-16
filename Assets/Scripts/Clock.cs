@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SuperPupSystems.Helper;
 using TMPro;
+using UnityEngine.Events;
 
 public enum TIME_OF_DAY
 {
@@ -26,11 +27,12 @@ public class Clock : MonoBehaviour
     private int clockTimeTracker = 0;
     private int minutes = 60;
     private string timeOfDay = "";
+    [HideInInspector]
+    public UnityEvent endOfDay = new UnityEvent();
 
     void Start()
     {
         clockTimer.StartTimer(minutes, clockTimer.AutoRestart);
-        Debug.Log("Test: " + clockTimer.TimeLeft);
         CURRENT_TIME = TIME_OF_DAY.NINE;
         timeText.text = "9:00 AM";
         
@@ -40,6 +42,7 @@ public class Clock : MonoBehaviour
     {
         TimeTracker();
         DisplayTime();
+        Debug.Log(clockTimeTracker);
     }
 
     public void HourBump()
@@ -55,48 +58,50 @@ public class Clock : MonoBehaviour
             case 0:
                 CURRENT_TIME = TIME_OF_DAY.NINE;
                 timeOfDay = "AM";
-                Debug.Log("It is 9 AM");
+                //Debug.Log("It is 9 AM");
                 break;
             case 1:
                 CURRENT_TIME = TIME_OF_DAY.TEN;
                 timeOfDay = "AM";
-                Debug.Log("It is 10 AM");
+                //Debug.Log("It is 10 AM");
                 break;
             case 2:
                 CURRENT_TIME = TIME_OF_DAY.ELEVEN;
                 timeOfDay = "AM";
-                Debug.Log("It is 11 AM");
+                //Debug.Log("It is 11 AM");
                 break;
             case 3:
                 CURRENT_TIME = TIME_OF_DAY.TWELVE;
                 timeOfDay = "PM";
-                Debug.Log("It is 12 PM");
+                //Debug.Log("It is 12 PM");
                 break;
             case 4:
                 CURRENT_TIME = TIME_OF_DAY.ONE;
                 timeOfDay = "PM";
-                Debug.Log("It is 1 PM");
+                //Debug.Log("It is 1 PM");
                 break;
             case 5:
                 CURRENT_TIME = TIME_OF_DAY.TWO;
                 timeOfDay = "PM";
-                Debug.Log("It is 2 PM");
+                //Debug.Log("It is 2 PM");
                 break;
             case 6:
                 CURRENT_TIME = TIME_OF_DAY.THREE;
                 timeOfDay = "PM";
-                Debug.Log("It is 3 PM");
+                //Debug.Log("It is 3 PM");
                 break;
             case 7:
                 CURRENT_TIME = TIME_OF_DAY.FOUR;
                 timeOfDay = "PM";
-                Debug.Log("It is 4 PM");
+                //Debug.Log("It is 4 PM");
                 break;
             case 8:
                 CURRENT_TIME = TIME_OF_DAY.FIVE;
                 timeOfDay = "PM";
-                Debug.Log("It is 5 PM");
+                //Debug.Log("It is 5 PM");
+                endOfDay.Invoke();
                 clockTimer.StopTimer();
+
                 break;
         }
         

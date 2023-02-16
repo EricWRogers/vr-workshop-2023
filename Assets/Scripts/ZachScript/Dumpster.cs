@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Trash_Bigger_Better : MonoBehaviour
+public class Dumpster : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Trash"))
         {
             other.GetComponent<Trash>().Trash_Task();
-            Debug.Log("Taking out the trash");
+            FindObjectOfType<Trash_Task>().SpawnFX(transform.position, Quaternion.identity);
         }
     }
 }

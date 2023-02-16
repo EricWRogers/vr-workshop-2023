@@ -33,6 +33,11 @@ public class VirtualTextInput : MonoBehaviour
                 return;
             }
 
+            if (_text.Contains("CODE::"))
+            {
+                return;
+            }
+
             text.SetText(text.text + _text);
         }
     }

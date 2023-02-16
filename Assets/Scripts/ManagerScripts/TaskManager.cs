@@ -1,9 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Events;
 using TMPro;
 using System.Linq;
-using UnityEngine.UI;
+
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance;
@@ -11,8 +10,9 @@ public class TaskManager : MonoBehaviour
     public GameObject taskUIGroup;
     public GameObject standardTextPrefab;
 
-    //[HideInInspector]
+    [HideInInspector]
     public List<GameObject> taskUIElements = new List<GameObject>();
+    [HideInInspector]
     public List<GameObject> allUIElements = new List<GameObject>();
     
 
@@ -49,7 +49,7 @@ public class TaskManager : MonoBehaviour
             textInstance.GetComponent<TextMeshProUGUI>().SetText(tasks[i].taskName + " [" + tasks[i].currentAmount + "/" + tasks[i].requiredAmount + "]");
             textInstance.GetComponentInChildren<TaskDescriptionController>().descriptionBox.GetComponent<TextMeshProUGUI>().SetText(tasks[i].taskDescription);
 
-            textInstance.transform.parent = taskUIGroup.transform;
+            textInstance.transform.SetParent(taskUIGroup.transform, false);
             taskUIElements.Add(textInstance);
         }
 
@@ -62,15 +62,20 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         for (int i = 0; i < tasks.Count; i++)
         {
-            if (tasks[i].currentAmount > tasks[i].requiredAmount)
-                continue;
+            //if (tasks[i].currentAmount > tasks[i].requiredAmount)
+            //    continue;
 
             taskUIElements[i].GetComponent<TextMeshProUGUI>().SetText(tasks[i].taskName + " [" + tasks[i].currentAmount + "/" + tasks[i].requiredAmount + "]");
             tasks[i].currentText = tasks[i].taskName + " [" + tasks[i].currentAmount + "/" + tasks[i].requiredAmount + "]";
+        }
+
+        if (tasks.Count == 0)
+        {
+            DayManager.Instance.LoadWin();
         }
     }
 

@@ -30,6 +30,7 @@ public class VirtualSendButton : VirtualButton
         if (task.currentAmount >= task.requiredAmount)
         {
             task.CompleteTask(task);
+            task.SpawnFX(transform.position);
         }
     }
 }

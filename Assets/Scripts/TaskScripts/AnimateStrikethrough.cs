@@ -29,7 +29,10 @@ public class AnimateStrikethrough : MonoBehaviour
 
     public void RemoveText()
     {
+        FindObjectOfType<TaskManager>().taskUIElements.Remove(text.gameObject);
+
         Destroy(text.gameObject);
         Destroy(descriptionBox.gameObject);
+        
     }
 }

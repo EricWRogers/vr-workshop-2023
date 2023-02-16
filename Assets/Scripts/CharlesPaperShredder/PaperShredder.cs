@@ -1,27 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperShredder : Task
+public class PaperShredder : MonoBehaviour
 {
-    public int shredAmount = 5;
     public GameObject paperParticle;
     public Vector3 shredParticleLocation;
     public Quaternion shredParticleRotation;
     [HideInInspector]
-    public int shredded = 0;
-    // Start is called before the first frame update
+
+    private ShredPaperTask task;
+
     void Start()
     {
-        FindObjectOfType<PaperContainer>();
+        task = FindObjectOfType<ShredPaperTask>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if(shredded==shredAmount)
+        if (other.CompareTag("Paper"))
         {
-            CompleteTask(this);
+            task.UpdateTask();
+            //StartCoroutine(shredPaperParticle());
+            Destroy(other.gameObject);
         }
     }
 
