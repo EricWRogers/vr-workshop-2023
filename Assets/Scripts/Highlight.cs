@@ -8,19 +8,21 @@ public class Highlight : MonoBehaviour
     private int highlightMask;
     public GameObject interactableObject;
 
-    void awake()
+    void Awake()
     {
-        defaultMask = LayerMask.NameToLayer("default");
-        highlightMask = LayerMask.NameToLayer("Hightlight");
+        defaultMask = interactableObject.layer;
+        highlightMask = LayerMask.NameToLayer("Highlight");
     }
 
     public void HighlightObject()
     {
         interactableObject.layer = highlightMask;
+        Debug.Log("HighLight");
     }
 
     public void DehighlightObject()
     {
         interactableObject.layer = defaultMask;
+        Debug.Log("DeHighLight");
     }
 }
