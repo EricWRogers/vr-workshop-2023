@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Copy : MonoBehaviour
+public class Printer : MonoBehaviour
 {
     public bool ReadyToCopy = false;
     public Rigidbody rigidbody;
