@@ -21,7 +21,7 @@ public class Clock : MonoBehaviour
 {
     public Timer clockTimer;
     public TIME_OF_DAY CURRENT_TIME;
-    
+    public float blackoutScale;
     public TMP_Text timeText;
 
     private int clockTimeTracker = 0;
@@ -148,5 +148,13 @@ public class Clock : MonoBehaviour
         }
         timeString += (int)(minutes - clockTimer.TimeLeft) + " " + timeOfDay;
         timeText.text = timeString;
+    }
+
+    public void Blackout(Tier _energyTier)
+    {
+        if(_energyTier == Tier.High)
+        {
+            clockTimer.timeScale = blackoutScale;
+        }
     }
 }
