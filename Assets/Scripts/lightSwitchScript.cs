@@ -4,29 +4,38 @@ using UnityEngine;
 
 public class lightSwitchScript : MonoBehaviour
 {
-    public GameObject textToDisplay; //  displays UI text
-    private bool PlayerInZone; // checks if player is in trigger
-    public GameObject lightOrObject; // whatever is going to be activated
+    public GameObject lightOn, lightOff, switchOn, switchOff;//, intIcon;
+    public bool toggle;
 
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerStay(Collider other)
     {
-        PlayerInZone = false;  // player not in zone
-        textToDisplay.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(PlayerInZone && Input.GetKeyDown(KeyCode.F)) // if in zone and presses F
+        if (other.CompareTag("MainCamera"))
         {
-            lightOrObject.SetActive(!lightOrObject.activeSelf);
-            
+            //intIcon.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (toggle == true)
+                {
+                    lightOn.SetActive(true);
+                    lightOff.SetActive(false);
+                    switchOn.SetActive(true);
+                    switchOff.SetActive(false);
+                }
+                if (toggle == false)
+                {
+                    lightOn.SetActive(false);
+                    lightOff.SetActive(true);
+                    switchOn.SetActive(false);
+                    switchOff.SetActive(true);
+                }
+            }
         }
     }
-
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
-        if (other.gameObject)
+        if (other.CompareTag("MainCamera"))
+        {
+            //intIcon.SetActive(false);
+        }
     }
 }
