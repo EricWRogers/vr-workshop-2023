@@ -6,7 +6,7 @@ public class BackgroundMusic : MonoBehaviour
 {
     public bool playing = false;
     public GameObject manager = null;
-    string song = "pixie";
+    public string song = "pixie";
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class BackgroundMusic : MonoBehaviour
         
     }
 
-    public void OnOff()
+    public void OnOff(string song)
     {
         if (playing == false)
         {
