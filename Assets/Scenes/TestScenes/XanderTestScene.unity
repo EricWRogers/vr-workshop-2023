@@ -736,7 +736,7 @@ MonoBehaviour:
   - name: Base Background
     atPosition: 0
     clip: {fileID: 8300000, guid: 3a389c64590147f4183931727de089a8, type: 3}
-    volume: 0.15
+    volume: 0.25
     pitch: 1
     spatialBlend: 0
     source: {fileID: 0}
