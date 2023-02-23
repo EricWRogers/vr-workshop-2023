@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lightSwitchScript : MonoBehaviour
+public class NewSwitchScript : MonoBehaviour
 {
-    public GameObject lightOn, lightOff, switchOn, switchOff;//, intIcon;
+    public GameObject light, switchOn, switchOff;
     public bool toggle;
 
     void OnTriggerStay(Collider other)
@@ -16,19 +16,33 @@ public class lightSwitchScript : MonoBehaviour
             {
                 if (toggle == true)
                 {
-                    lightOn.SetActive(true);
-                    lightOff.SetActive(false);
+                    light.SetActive(true);
                     switchOn.SetActive(true);
                     switchOff.SetActive(false);
                 }
                 if (toggle == false)
                 {
-                    lightOn.SetActive(false);
-                    lightOff.SetActive(true);
+                    light.SetActive(false);
                     switchOn.SetActive(false);
                     switchOff.SetActive(true);
                 }
             }
+        }
+    }
+
+   public void ToggleLightswitch()
+    {
+        if (toggle == true)
+        {
+            light.SetActive(true);
+            switchOn.SetActive(true);
+            switchOff.SetActive(false);
+        }
+        if (toggle == false)
+        {
+            light.SetActive(false);
+            switchOn.SetActive(false);
+            switchOff.SetActive(true);
         }
     }
     void OnTriggerExit(Collider other)
@@ -38,4 +52,15 @@ public class lightSwitchScript : MonoBehaviour
             //intIcon.SetActive(false);
         }
     }
-} 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
