@@ -8,7 +8,11 @@ public class Dumpster : MonoBehaviour
         if (other.CompareTag("Trash"))
         {
             other.GetComponent<Trash>().Trash_Task();
+
             FindObjectOfType<Trash_Task>().SpawnFX(transform.position, Quaternion.identity);
+
+            Debug.Log("Taking out the trash");
+
         }
     }
 }

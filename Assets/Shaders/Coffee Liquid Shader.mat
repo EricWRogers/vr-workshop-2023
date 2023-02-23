@@ -55,15 +55,17 @@ Material:
     - _CastShadows: 1
     - _Cull: 0
     - _DstBlend: 10
-    - _Fill: 0.709
+    - _Fill: 0.516
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
     - _Surface: 1
+    - _WobbleX: 0
+    - _WobbleZ: 0
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _SideColor: {r: 0.7058823, g: 0.34509796, b: 0.054901943, a: 0}
-    - _TopColor: {r: 0.7058823, g: 0.34509796, b: 0.054901943, a: 0}
+    - _SideColor: {r: 0.7058823, g: 0.34509793, b: 0.05490192, a: 1}
+    - _TopColor: {r: 0.7058823, g: 0.34509793, b: 0.05490192, a: 1}
   m_BuildTextureStacks: []

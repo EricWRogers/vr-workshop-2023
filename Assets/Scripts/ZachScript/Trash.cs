@@ -25,6 +25,7 @@ public class Trash : MonoBehaviour
         TrashBags++;
         task.UpdateTask();
         TrashEvent.Invoke();
+        Destroy(gameObject);
     }
 
 }
