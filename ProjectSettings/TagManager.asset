@@ -16,6 +16,8 @@ TagManager:
   - Drawer
   - Printer
   - Pen
+  - Cord
+  - Document
   layers:
   - Default
   - TransparentFX
