@@ -81,12 +81,12 @@ public class CordSpawn : MonoBehaviour
 
             if(x==0 && mouseCord)
             {
-                tmp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                //tmp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 tmp.GetComponent<CharacterJoint>().connectedBody = mouse.GetComponent<Rigidbody>();
             }
             else if(x==0 && keyboardCord)
             {
-                tmp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                //tmp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 tmp.GetComponent<CharacterJoint>().connectedBody = keyboard.GetComponent<Rigidbody>();
             }
             else
@@ -97,8 +97,9 @@ public class CordSpawn : MonoBehaviour
             if(x==(count-1))
             {
                 tmp.GetComponent<CharacterJoint>().connectedBody = computer.GetComponent<Rigidbody>();
+                parentObject.transform.Find((parentObject.transform.childCount).ToString()).GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             }
-            parentObject.transform.Find((parentObject.transform.childCount).ToString()).GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            
         }
     }
 }
