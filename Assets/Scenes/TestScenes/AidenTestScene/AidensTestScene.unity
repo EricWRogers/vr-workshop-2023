@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: score
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2986332137239022714, guid: f39598ca9a78fab4b9d212672d6c3df3, type: 3}
+      propertyPath: energyLeft
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2986332137471164259, guid: f39598ca9a78fab4b9d212672d6c3df3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
