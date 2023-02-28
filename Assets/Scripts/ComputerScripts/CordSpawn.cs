@@ -74,7 +74,7 @@ public class CordSpawn : MonoBehaviour
             }
             else
             {
-                tmp = Instantiate(partPrefab);
+                tmp = Instantiate(partPrefab, new Vector3((final.x*(x/count)), (final.y*(x/count)) /* * partDistance * (x+1) */, (final.z*(x/count))), Quaternion.identity, parentObject.transform);
             }
 
             tmp.name = parentObject.transform.childCount.ToString();
