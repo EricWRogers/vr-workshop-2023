@@ -5,13 +5,14 @@ using UnityEngine;
 public class NewSwitchScript : MonoBehaviour
 {
     public GameObject light, switchOn, switchOff;
+    public GameObject[] lights; 
+    
     public bool toggle;
 
     void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("MainCamera"))
         {
-            //intIcon.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (toggle == true)
@@ -32,6 +33,8 @@ public class NewSwitchScript : MonoBehaviour
 
    public void ToggleLightswitch()
     {
+        Debug.Log("Switched");
+        toggle = !toggle;
         if (toggle == true)
         {
             light.SetActive(true);
