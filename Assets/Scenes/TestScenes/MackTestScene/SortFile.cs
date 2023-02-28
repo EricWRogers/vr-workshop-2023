@@ -17,6 +17,7 @@ public class SortFile : Task
     {
         if (drawer.numFiled >= requiredAmount)
         {
+            Debug.Log("Task Completed");
             CompleteTask(this);
         }
     }
