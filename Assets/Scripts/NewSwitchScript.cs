@@ -11,7 +11,6 @@ public class NewSwitchScript : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            //intIcon.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (toggle == true)

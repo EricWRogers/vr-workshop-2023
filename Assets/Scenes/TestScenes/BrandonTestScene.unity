@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906871964752085506, guid: 99928fd723ee95e4c8f349c80fbf0939, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Document
       objectReference: {fileID: 0}
     - target: {fileID: 6906871964752085508, guid: 99928fd723ee95e4c8f349c80fbf0939, type: 3}
       propertyPath: Coffee
@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 1535022746}
   - component: {fileID: 1535022745}
   - component: {fileID: 1535022744}
+  - component: {fileID: 1535022748}
   m_Layer: 0
   m_Name: PrintButton
   m_TagString: Untagged
@@ -533,6 +534,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535022742}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1535022748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535022742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fdad39194e1464f840625fa41dd928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  print: {fileID: 0}
+  rigidbody: {fileID: 1535022744}
 --- !u!1 &1775905365
 GameObject:
   m_ObjectHideFlags: 0

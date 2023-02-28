@@ -157,15 +157,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7914364560668059216, guid: 270adf111a6f70d4593cb41cde55271e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6246909
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7914364560668059216, guid: 270adf111a6f70d4593cb41cde55271e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.032341365
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7914364560668059216, guid: 270adf111a6f70d4593cb41cde55271e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.52641106
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7914364560668059216, guid: 270adf111a6f70d4593cb41cde55271e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -232,8 +232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partPrefab: {fileID: 4181778349564823781, guid: c66e5fe2ed110ac41820a7b614853e6e, type: 3}
   parentObject: {fileID: 340784903}
-  length: 5
-  partDistance: 0.21
+  length: 23
+  partDistance: 0.1
   reset: 0
   spawn: 1
   keyboardCord: 0
@@ -246,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340784903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -270,15 +270,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384736294883381185, guid: e393d88a900e0e2408999c3f16f471f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 5384736294883381185, guid: e393d88a900e0e2408999c3f16f471f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9999981
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5384736294883381185, guid: e393d88a900e0e2408999c3f16f471f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.85
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5384736294883381185, guid: e393d88a900e0e2408999c3f16f471f9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -590,8 +590,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partPrefab: {fileID: 4181778349564823781, guid: c66e5fe2ed110ac41820a7b614853e6e, type: 3}
   parentObject: {fileID: 1441031742}
-  length: 5
-  partDistance: 0.21
+  length: 23
+  partDistance: 0.1
   reset: 0
   spawn: 1
   keyboardCord: 0
@@ -604,7 +604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441031742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
