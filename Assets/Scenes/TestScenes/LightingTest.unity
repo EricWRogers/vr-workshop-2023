@@ -2331,7 +2331,7 @@ GameObject:
   - component: {fileID: 208280923}
   - component: {fileID: 208280922}
   m_Layer: 0
-  m_Name: Area Light
+  m_Name: Computer Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2368,8 +2368,8 @@ Light:
   serializedVersion: 10
   m_Type: 3
   m_Shape: 0
-  m_Color: {r: 0.6084906, g: 0.8291737, b: 1, a: 1}
-  m_Intensity: 10
+  m_Color: {r: 0.01214843, g: 0.51262385, b: 0.8584906, a: 1}
+  m_Intensity: 30
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -16451,7 +16451,7 @@ GameObject:
   - component: {fileID: 1289649746}
   - component: {fileID: 1289649745}
   m_Layer: 0
-  m_Name: Area Light
+  m_Name: Ceiling Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16489,7 +16489,7 @@ Light:
   m_Type: 3
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
