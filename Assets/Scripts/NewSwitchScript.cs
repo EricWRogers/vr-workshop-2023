@@ -5,6 +5,8 @@ using UnityEngine;
 public class NewSwitchScript : MonoBehaviour
 {
     public GameObject light, switchOn, switchOff;
+    public GameObject[] lights; 
+    
     public bool toggle;
 
     void OnTriggerStay(Collider other)
@@ -31,6 +33,8 @@ public class NewSwitchScript : MonoBehaviour
 
    public void ToggleLightswitch()
     {
+        Debug.Log("Switched");
+        toggle = !toggle;
         if (toggle == true)
         {
             light.SetActive(true);
