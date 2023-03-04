@@ -6,6 +6,7 @@ public class Print : MonoBehaviour
 {
     public Printer print;
     public Rigidbody rigidbody;
+    public GameObject Document;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -15,6 +16,7 @@ public class Print : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
+                Instantiate(Document, new Vector3(0, 0, 0), Quaternion.identity);
                 Debug.Log("Making Copies");
             }
         }

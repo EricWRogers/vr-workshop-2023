@@ -44,19 +44,49 @@ public class CordSpawn : MonoBehaviour
         for(int x=0;x<count;x++)
         {
             GameObject tmp;
+            GameObject keyboard, mouse, computer;
+            Vector3 initial, final;
 
-            tmp = Instantiate(partPrefab, new Vector3(transform.position.x, transform.position.y * partDistance * (x+1), transform.position.z), Quaternion.identity, parentObject.transform);
+            computer = GameObject.Find("Computer");
+            mouse = FindObjectOfType<MouseController>().gameObject;
+            keyboard = GameObject.Find("Keyboard");
+
+            final = computer.transform.position;
+            initial = new Vector3(0,0,0);
+
+            if(mouseCord)
+            {
+                initial = mouse.transform.position;
+            }
+            
+            if(keyboardCord)
+            {
+                initial = keyboard.transform.position;
+            }
+
+            if(x==0)
+            {
+                tmp = Instantiate(partPrefab, new Vector3(initial.x, (initial.y) /* * partDistance * (x+1) */, initial.z), Quaternion.identity, parentObject.transform);
+            }
+            else if(x==(count-1))
+            {
+                tmp = Instantiate(partPrefab, new Vector3(final.x, (final.y) /* * partDistance * (x+1) */, final.z), Quaternion.identity, parentObject.transform);
+            }
+            else
+            {
+                tmp = Instantiate(partPrefab, new Vector3(((initial.x)*(1-x/count))+((final.x)*(x/count)), ((initial.y)*(1-x/count))+(final.y*(x/count)) /* * partDistance * (x+1) */, ((initial.z)*(1-x/count))+(final.z*(x/count))), Quaternion.identity, parentObject.transform);
+            }
 
             tmp.name = parentObject.transform.childCount.ToString();
 
             if(x==0 && mouseCord)
             {
-                GameObject mouse = FindObjectOfType<MouseController>().gameObject;
+                //tmp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 tmp.GetComponent<CharacterJoint>().connectedBody = mouse.GetComponent<Rigidbody>();
             }
             else if(x==0 && keyboardCord)
             {
-                GameObject keyboard = GameObject.Find("Keyboard");
+                //tmp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 tmp.GetComponent<CharacterJoint>().connectedBody = keyboard.GetComponent<Rigidbody>();
             }
             else
@@ -66,9 +96,10 @@ public class CordSpawn : MonoBehaviour
             }
             if(x==(count-1))
             {
-                GameObject computer = GameObject.Find("Computer");
                 tmp.GetComponent<CharacterJoint>().connectedBody = computer.GetComponent<Rigidbody>();
+                parentObject.transform.Find((parentObject.transform.childCount).ToString()).GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             }
+            
         }
     }
 }
