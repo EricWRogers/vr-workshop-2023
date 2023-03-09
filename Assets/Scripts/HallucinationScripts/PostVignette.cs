@@ -11,17 +11,32 @@ public class PostVignette : HallucinationEvent
     {
         base.PerformHallucinationEvent();
 
-        if (isActive == false)
-        {
-            vignetteObj.SetActive(true);
-            isOn = true;
-        }
-        else if (isActive == true)
-        {
-            vignetteObj.SetActive(false);
-            isOn = false;
-        }
+        turnOn();
 
         FinishHallucinationEvent();
+    }
+
+    public void testVignette()
+    {
+        if (isOn == false)
+        {
+            turnOn();
+        }
+        else if (isOn == true)
+        {
+            turnOff();
+        }
+    }
+
+    public void turnOn()
+    {
+        vignetteObj.SetActive(true);
+        isOn = true;
+    }
+
+    public void turnOff()
+    {
+        vignetteObj.SetActive(false);
+        isOn = false;
     }
 }
