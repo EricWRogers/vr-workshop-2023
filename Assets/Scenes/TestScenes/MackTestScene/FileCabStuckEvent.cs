@@ -7,11 +7,11 @@ public class FileCabStuckEvent : MonoBehaviour
     public Rigidbody playerRigi;
     bool open = false;
 
-    OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("player"))
         {
-            if(other.GetComponent.velocity <= 10)
+            if(other.GetComponent<Rigidbody>().velocity.magnitude <= 10)
             {
                 open = true;
             }
