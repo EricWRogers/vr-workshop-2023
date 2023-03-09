@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary; //Binary formatter because
 
 public static class SaveSystem
 {
-  public static void SavePlayer(GameObject player)
+  public static void SavePlayer(PlayerData player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath +"/player.dat"; //Probably, I don't know. Use this if that doesnt work -> /storage/emulated/0/Android/data/<packagename>/files
