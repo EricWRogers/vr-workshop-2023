@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
-    public int time;
+    public float time;
     public float hydration;
     public float energy;
     public float[] position;
