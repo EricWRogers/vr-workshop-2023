@@ -22,15 +22,20 @@ public class PhonePickedUp : Task
         Debug.Log("hi");
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         Debug.Log("Phone Held");
-        phoneHeld = true;
-        while (other.CompareTag("Player") && secondsHeld != 4)
+       
+        if (other.CompareTag("Player"))
         {
-            
-            secondsHeld += Time.deltaTime;
+            phoneHeld = true;
 
+            float timer = 205;
+            timer -= Time.deltaTime;
+            if(timer != 0)
+            {
+                secondsHeld += Time.deltaTime;
+            }
             Debug.Log("Phone Held");
         }
     }
@@ -39,6 +44,7 @@ public class PhonePickedUp : Task
     {
         if (other.CompareTag("Player"))
         {
+            secondsHeld = 0;
             phoneHeld = false;
             secondsHeld = 0;
 
@@ -50,27 +56,31 @@ public class PhonePickedUp : Task
 
 public class CallTimer : PhonePickedUp
 {
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         Debug.Log("Phone Held");
-        phoneHeld = true;
-        while (other.CompareTag("Player"))
-        {
-            
-            secondsHeld += Time.deltaTime;
 
+        if (other.CompareTag("Player"))
+        {
+            phoneHeld = true;
+
+            float timer = 205;
+            timer -= Time.deltaTime;
+            if (timer != 0)
+            {
+                secondsHeld += Time.deltaTime;
+            }
             Debug.Log("Phone Held");
         }
     }
 
 
     private void OnTriggerExit(Collider other)
-    { 
-        phoneHeld = false;
-
+    {
         if (other.CompareTag("Player"))
         {
-           
+            secondsHeld = 0;
+            phoneHeld = false;
             secondsHeld = 0;
 
             Debug.Log("Phone not held");

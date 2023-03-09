@@ -14,6 +14,7 @@ public class DoorScript : MonoBehaviour
     public Transform doorLocation;
     public Transform playerLocation;
     public Timer doorTimer;
+    public Animator doorAnimation;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -28,8 +29,7 @@ public class DoorScript : MonoBehaviour
                 doorTimer.StartTimer(timeToDoorClose, doorTimer.AutoRestart);
                 Debug.Log("trigger Here");
                 Debug.Log("trigger" + isDoorOpen);
-                doorOpen.SetActive(true);
-                doorClose.SetActive(false);
+                doorAnimation.SetTrigger("OnDoorOpen");
                 isDoorOpen = true;
             }
         }
@@ -52,8 +52,7 @@ public class DoorScript : MonoBehaviour
     public void OpenDoor()
     {
         doorTimer.StartTimer(timeToDoorClose, doorTimer.AutoRestart);
-        doorOpen.SetActive(true);
-        doorClose.SetActive(false);
+        doorAnimation.SetTrigger("OnDoorOpen");
     }
 
     public void CloseDoor()
@@ -61,8 +60,7 @@ public class DoorScript : MonoBehaviour
         float dist = Vector3.Distance(doorLocation.position, playerLocation.position);
         if (dist > maxDistance)
         {
-            doorOpen.SetActive(false);
-            doorClose.SetActive(true);
+            doorAnimation.SetTrigger("OnDoorClose");
         }
         else
         {
