@@ -5,12 +5,14 @@ using UnityEngine;
 public class Bucket : MonoBehaviour
 {
     private Material material;
+    public WaterBucket checker;
     public GameObject waterBucket;
     public float increaseSize;
 
     public void Start()
     {
         material = waterBucket.GetComponent<MeshRenderer>().material;
+        checker = FindObjectOfType<WaterBucket>();
     }
 
     public void OnParticleCollision(GameObject other)
@@ -19,10 +21,21 @@ public class Bucket : MonoBehaviour
         if(other.gameObject.CompareTag("Finish"))
         {
             Debug.Log("here");
-            //waterBucket.transform.LeanScaleY(waterBucket.transform.localScale.y + increaseSize, .5f).setEaseLinear();
-            //material.LeanValue(material.GetFloat("_Fill"), material.GetFloat("_Fill") + increaseSize, .5f);
-            //material.SetFloat("_Fill", material.GetFloat("_Fill") + increaseSize);
-            LeanTween.value(material.GetFloat("_Fill"), material.GetFloat("_Fill") + increaseSize, .5f);
+            float targetValue = material.GetFloat("_Fill") + 0.1f;
+
+            if(targetValue > material.GetFloat("_Fill"))
+            {
+                material.SetFloat("_Fill", material.GetFloat("_Fill") + Time.deltaTime);
+            }
+
+        }
+
+        if(material.GetFloat("_Fill") >= 1f)
+        {
+            //task complete
+            checker.UpdateTask();
+            checker.CompleteTask(checker);
+            Debug.Log("Task Complete");
         }
             
     }
