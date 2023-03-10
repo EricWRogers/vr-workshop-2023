@@ -13,6 +13,7 @@ public class HallucinationEvent : MonoBehaviour
     public Tier hallucinationTier;
     [Tooltip("Set this to true if your code in PerformEvent needs to be called in Update.")]
     public bool needsUpdate = false;
+    public GameObject globalVol;
 
     //We use a static bool here because we may need to know if ANY event is active not just this one particularly
     [HideInInspector]
@@ -26,6 +27,7 @@ public class HallucinationEvent : MonoBehaviour
     public void StartHallucinationEvent()
     {
         hallucinationStarted.Invoke();
+        vTurnOn();
         isActive = true;
         hasStarted = true;
     }
@@ -39,6 +41,17 @@ public class HallucinationEvent : MonoBehaviour
     public void FinishHallucinationEvent()
     {
         hallucinationEnded.Invoke();
+        vTurnOff();
         isActive = false;
+    }
+
+    private void vTurnOn()
+    {
+        globalVol.SetActive(true);
+    }
+
+    private void vTurnOff() 
+    {
+        globalVol.SetActive(false);
     }
 }
