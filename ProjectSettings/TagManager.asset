@@ -18,11 +18,7 @@ TagManager:
   - Pen
   - Cord
   - Document
-<<<<<<< HEAD
-  - Pen_Sign
-=======
   - WaterBucket
->>>>>>> main
   layers:
   - Default
   - TransparentFX
