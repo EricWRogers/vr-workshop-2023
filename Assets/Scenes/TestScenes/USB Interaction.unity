@@ -581,6 +581,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf465f8b724d0846ad954ad3eb287f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tvScreen: {fileID: 1953308723}
+  slides:
+  - {fileID: 2100000, guid: 4c3c7be86e46ef24b9061d712522e902, type: 2}
+  - {fileID: 2100000, guid: dbb113eb72d737e49a88d8315694805f, type: 2}
+  - {fileID: 2100000, guid: f04bfb512b1b91845bc1dd0a09183790, type: 2}
 --- !u!1 &1953308723
 GameObject:
   m_ObjectHideFlags: 0
