@@ -10,10 +10,12 @@ public class USBscript : MonoBehaviour
 
     public void slideshow()
     {
-        for (Material in slides)
+        /*
+        for (Material material in slides)
         {
-            tvScreen.GetComponent(Material)
+            tvScreen.GetComponent(Material);
         }
+        */
     }
 
     private void OnCollisionEnter(Collision tvScreen)
