@@ -11,7 +11,7 @@ public class PostVignette : HallucinationEvent
     {
         base.PerformHallucinationEvent();
 
-        turnOn();
+        vTurnOn();
 
         FinishHallucinationEvent();
     }
@@ -20,21 +20,21 @@ public class PostVignette : HallucinationEvent
     {
         if (isOn == false)
         {
-            turnOn();
+            vTurnOn();
         }
         else if (isOn == true)
         {
-            turnOff();
+            vTurnOff();
         }
     }
 
-    public void turnOn()
+    public void vTurnOn()
     {
         vignetteObj.SetActive(true);
         isOn = true;
     }
 
-    public void turnOff()
+    public void vTurnOff()
     {
         vignetteObj.SetActive(false);
         isOn = false;
