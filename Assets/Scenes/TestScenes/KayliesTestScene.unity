@@ -2023,9 +2023,33 @@ PrefabInstance:
       propertyPath: m_RaycastMask.m_Bits
       value: 608
       objectReference: {fileID: 0}
+    - target: {fileID: 8650424662829020746, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 133342632}
+    - target: {fileID: 8650424662829020746, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650424662829020746, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8650424663402757735, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650424663402757735, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 133342632}
+    - target: {fileID: 8650424663402757735, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650424663402757735, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8650424663811897526, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_RootOrder
