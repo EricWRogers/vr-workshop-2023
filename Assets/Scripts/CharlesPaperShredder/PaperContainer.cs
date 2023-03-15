@@ -5,8 +5,7 @@ using UnityEngine;
 public class PaperContainer : MonoBehaviour
 {
     public GameObject paper;
-    public Vector3 location;
-    public Quaternion rotate;
+    public Transform spawnPoint;
     ShredPaperTask task;
 
     // Start is called before the first frame update
@@ -23,7 +22,7 @@ public class PaperContainer : MonoBehaviour
         amountOfPaper += 2; //buffer
         for(int i = 1; i <= amountOfPaper; i++)
         {
-            Instantiate(paper, transform.position + new Vector3(0f,0.075f*(i),0f), rotate);
+            Instantiate(paper, new Vector3(spawnPoint.position.x, spawnPoint.position.y + 0.1f * (i), spawnPoint.position.z), Quaternion.identity);
         }
     }
 }

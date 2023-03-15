@@ -1,20 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class KeyboardEvent : UnityEvent<string> { }
-
 public class PhysicsButton : MonoBehaviour
 {
-    public string character;
-
-    public KeyboardEvent onPressed = new KeyboardEvent();
-    public KeyboardEvent onReleased = new KeyboardEvent();
+    public UnityEvent onPressed = new UnityEvent();
+    public UnityEvent onReleased = new UnityEvent();
 
     public float threshold = .1f;
     public float deadZone = .025f;
 
-    private bool isPressed = false;
+    protected bool isPressed = false;
     Vector3 startPos;
     private ConfigurableJoint joint;
 
@@ -46,15 +41,15 @@ public class PhysicsButton : MonoBehaviour
         return Mathf.Clamp(value, -1f, 1f);
     }
 
-    private void Pressed()
+    protected virtual void Pressed()
     {
         isPressed = true;
-        onPressed.Invoke(character);
+        onPressed.Invoke();
     }
     
-    private void Released()
+    protected virtual void Released()
     {
         isPressed = false;
-        onReleased.Invoke(character);
+        onReleased.Invoke();
     }
 }

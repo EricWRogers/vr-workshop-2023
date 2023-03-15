@@ -83,6 +83,11 @@ public class TaskManager : MonoBehaviour
     {
         List<GameObject> temp = taskUIElements.Where(text => text.GetComponent<TextMeshProUGUI>().text == task.currentText).ToList();
 
+        if (temp.Count == 0)
+        {
+            Debug.LogError("Could not find matching task");
+        }
+
         temp[0].GetComponentInChildren<AnimateStrikethrough>().DoStrikeThrough();
     }
 }

@@ -7,7 +7,7 @@ public class VirtualTextInput : MonoBehaviour
 {
     public int requiredTextAmount = 50;
 
-    private List<PhysicsButton> keys;
+    private List<PhysicsKeyButton> keys;
     private TextMeshProUGUI text;
     [HideInInspector]
     public UnityEvent onFinish = new UnityEvent();
@@ -17,8 +17,8 @@ public class VirtualTextInput : MonoBehaviour
     protected virtual void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-        keys = new List<PhysicsButton>(FindObjectsOfType<PhysicsButton>());
-        keys.ForEach(key => key.onPressed.AddListener(AppendText));
+        keys = new List<PhysicsKeyButton>(FindObjectsOfType<PhysicsKeyButton>());
+        keys.ForEach(key => key.onKeyDown.AddListener(AppendText));
         onFinish.AddListener(Finish);
     }
 

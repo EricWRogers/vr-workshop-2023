@@ -5,23 +5,21 @@ using UnityEngine;
 public class Bucket : MonoBehaviour
 {
     private Material material;
-    public WaterBucket checker;
-    public GameObject waterBucket;
+    private WaterBucket task;
+    public GameObject fill;
     public float increaseSize;
 
     public void Start()
     {
-        material = waterBucket.GetComponent<MeshRenderer>().material;
-        checker = FindObjectOfType<WaterBucket>();
+        material = fill.GetComponent<MeshRenderer>().material;
+        task = FindObjectOfType<WaterBucket>();
     }
 
     public void OnParticleCollision(GameObject other)
     {
-        Debug.Log("coliding");
-        if(other.gameObject.CompareTag("Finish"))
+        if(other.gameObject.CompareTag("WaterDrop"))
         {
-            Debug.Log("here");
-            float targetValue = material.GetFloat("_Fill") + 0.1f;
+            float targetValue = material.GetFloat("_Fill") + increaseSize;
 
             if(targetValue > material.GetFloat("_Fill"))
             {
@@ -33,9 +31,9 @@ public class Bucket : MonoBehaviour
         if(material.GetFloat("_Fill") >= 1f)
         {
             //task complete
-            checker.UpdateTask();
-            checker.CompleteTask(checker);
-            Debug.Log("Task Complete");
+            task.UpdateTask();
+            task.CompleteTask(task);
+            Destroy(GameObject.FindGameObjectWithTag("WaterDrop"));
         }
             
     }
