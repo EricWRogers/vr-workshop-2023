@@ -476,16 +476,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 968843324}
-        m_TargetAssemblyTypeName: BackgroundMusic, Assembly-CSharp
-        m_MethodName: OnOff
+      - m_Target: {fileID: 559603599}
+        m_TargetAssemblyTypeName: AudioManagerX, Assembly-CSharp
+        m_MethodName: toggle
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: phone
+          m_StringArgument: Phone
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &462295788
@@ -610,9 +610,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 968843324}
-        m_TargetAssemblyTypeName: BackgroundMusic, Assembly-CSharp
-        m_MethodName: OnOff
+      - m_Target: {fileID: 559603599}
+        m_TargetAssemblyTypeName: AudioManagerX, Assembly-CSharp
+        m_MethodName: toggle
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -945,7 +945,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8d15be575bb264e9cfa34e5d87fcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Phone
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 032aaece436389c4eb511712fc64a2cd, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: BGM
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 3a389c64590147f4183931727de089a8, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 1
+    playOnAwake: 1
+    output: {fileID: 2160378706432661030, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Pixie
+    atPosition: 0
+    clip: {fileID: 8300000, guid: c0a1ac977efab04449a306b8159e653a, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 1
+    playOnAwake: 1
+    output: {fileID: 929831131957326005, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
 --- !u!1 &678280226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,16 +1063,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 968843324}
-        m_TargetAssemblyTypeName: BackgroundMusic, Assembly-CSharp
-        m_MethodName: OnOff
+      - m_Target: {fileID: 559603599}
+        m_TargetAssemblyTypeName: AudioManagerX, Assembly-CSharp
+        m_MethodName: toggle
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: pixie
+          m_StringArgument: Pixie
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &678280229
@@ -1950,16 +1983,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 968843324}
-        m_TargetAssemblyTypeName: BackgroundMusic, Assembly-CSharp
-        m_MethodName: OnOff
+      - m_Target: {fileID: 559603599}
+        m_TargetAssemblyTypeName: AudioManagerX, Assembly-CSharp
+        m_MethodName: toggle
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Base Background
+          m_StringArgument: BGM
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1927935010
