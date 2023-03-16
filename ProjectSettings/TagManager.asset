@@ -19,6 +19,8 @@ TagManager:
   - Cord
   - Document
   - WaterBucket
+  - WaterDrop
+  - PlayerMouth
   - screen
   layers:
   - Default
@@ -29,7 +31,7 @@ TagManager:
   - UI
   - Grabbable
   - Player
-  - 
+  - NoPullGrab
   - Highlight
   - StapledPaper
   - PostProcessing
