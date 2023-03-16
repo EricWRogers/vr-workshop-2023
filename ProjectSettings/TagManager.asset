@@ -19,6 +19,7 @@ TagManager:
   - Cord
   - Document
   - WaterBucket
+  - screen
   layers:
   - Default
   - TransparentFX
