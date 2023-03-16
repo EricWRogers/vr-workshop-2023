@@ -21,6 +21,7 @@ TagManager:
   - WaterBucket
   - WaterDrop
   - PlayerMouth
+  - screen
   layers:
   - Default
   - TransparentFX
