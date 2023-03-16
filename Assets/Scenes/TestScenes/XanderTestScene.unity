@@ -979,6 +979,160 @@ MonoBehaviour:
     playOnAwake: 1
     output: {fileID: 929831131957326005, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
     reverbPreset: 0
+  - name: Keyboard Click
+    atPosition: 0
+    clip: {fileID: 8300000, guid: e63cee2388cdf405aa5c6e2e6096073c, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Mouse Click
+    atPosition: 0
+    clip: {fileID: 8300000, guid: c55a66abee36c4b25abd0f2e19bcc941, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Page Turn
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 669b362facdb94aa7ad3c4bf6574da29, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Box Drop
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 50294ae4179c849f1ae30e6dbd072ae0, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Cup Slide
+    atPosition: 0
+    clip: {fileID: 8300000, guid: b0e97a1f7bb5840ea8d2606e637effe7, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Key Jingle
+    atPosition: 0
+    clip: {fileID: 8300000, guid: c0a9b5eb0f99d4d45bcccf0e6f08545b, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Lighter Flick
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 601e575ad25c1426894cb6bf83ab904b, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Marker
+    atPosition: 0
+    clip: {fileID: 8300000, guid: e0e9454eb81c142ecb9d71adaabed44e, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Coin Pile
+    atPosition: 0
+    clip: {fileID: 8300000, guid: dd27401f61c4043ca9fbe16f0cb4bcc8, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Click
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 422c23ea837ff4c01bb8e0d6e64b3ff1, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Double Click
+    atPosition: 0
+    clip: {fileID: 8300000, guid: f0aa3029c913945d98e6494332abdcb5, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Pen Click
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 760226493ad544517967bbe9588eb513, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Open Can
+    atPosition: 0
+    clip: {fileID: 8300000, guid: d48e1b16c132a4d9abf4ebca8128e741, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Book Drop
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 12fa88185c3c948a8837e88b0e3ced0a, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
 --- !u!1 &678280226
 GameObject:
   m_ObjectHideFlags: 0
