@@ -3448,7 +3448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.39
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13828,7 +13828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.39
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14282,7 +14282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.39
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15579,7 +15579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.39
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23452,7 +23452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.39
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 4348743340847504187, guid: 08dcc950f11029a4597b5b6b62952a71, type: 3}
       propertyPath: m_LocalPosition.z
