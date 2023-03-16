@@ -10,6 +10,11 @@ public class Highlight : MonoBehaviour
 
     void Awake()
     {
+        if (interactableObject == null)
+        {
+            interactableObject = gameObject;
+        }
+
         defaultMask = interactableObject.layer;
         highlightMask = LayerMask.NameToLayer("Highlight");
     }
