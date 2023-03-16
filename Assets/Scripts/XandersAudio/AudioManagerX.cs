@@ -51,6 +51,38 @@ public class AudioManagerX : MonoBehaviour
         s.source.Play();
     }
 
+    public void stop(String name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s==null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+        s.source.Stop();
+    }    
+
+
+    public void toggle(String name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s==null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+
+        if (s.source.isPlaying)
+        {
+            s.source.Stop();
+        }
+        else
+        {
+            s.source.Play();
+        }
+    }
+
+
     void Start()
     {
         play("BGM");
