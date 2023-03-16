@@ -1133,6 +1133,28 @@ MonoBehaviour:
     playOnAwake: 1
     output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
     reverbPreset: 0
+  - name: Metal Thud
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 4090db299df4c42f09bc5931de5b5c19, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
+  - name: Big Metal Thud
+    atPosition: 0
+    clip: {fileID: 8300000, guid: a83a565910e02489eb2c35fe3c749fdd, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0
 --- !u!1 &678280226
 GameObject:
   m_ObjectHideFlags: 0
