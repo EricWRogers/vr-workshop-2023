@@ -35,7 +35,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _HighlightAlpha: 0.2
-    - _HighlightSize: 0.1
+    - _HighlightSize: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
