@@ -114,7 +114,8 @@ GameObject:
   - component: {fileID: 2592538160584570774}
   - component: {fileID: 2592538160584570768}
   - component: {fileID: 2592538160584570769}
-  - component: {fileID: 8967035169800571415}
+  - component: {fileID: 2495728958486221763}
+  - component: {fileID: 3046462395371716497}
   m_Layer: 6
   m_Name: Pencil
   m_TagString: Pen
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8967035169800571415}
+      - m_Target: {fileID: 2495728958486221763}
         m_TargetAssemblyTypeName: Highlight, Assembly-CSharp
         m_MethodName: HighlightObject
         m_Mode: 1
@@ -200,7 +201,7 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8967035169800571415}
+      - m_Target: {fileID: 2495728958486221763}
         m_TargetAssemblyTypeName: Highlight, Assembly-CSharp
         m_MethodName: DehighlightObject
         m_Mode: 1
@@ -259,7 +260,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
-  m_MovementType: 0
+  m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -294,7 +295,7 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &8967035169800571415
+--- !u!114 &2495728958486221763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,3 +308,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableObject: {fileID: 1140011264404560439}
+--- !u!114 &3046462395371716497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592538160584570775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a575a0ddb1fa774680a5088f28d3a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupParent: {fileID: 0}

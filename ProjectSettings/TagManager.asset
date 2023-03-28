@@ -36,6 +36,9 @@ TagManager:
   - StapledPaper
   - PostProcessing
   - GrabIgnoreRay
+  - Key
+  - IgnoreKey
+  - 
   - 
   - 
   - 
