@@ -42,7 +42,6 @@ public class Clock : MonoBehaviour
     {
         TimeTracker();
         DisplayTime();
-        Debug.Log(clockTimeTracker);
     }
 
     public void HourBump()

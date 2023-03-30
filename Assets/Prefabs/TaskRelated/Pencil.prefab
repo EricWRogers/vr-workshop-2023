@@ -115,7 +115,6 @@ GameObject:
   - component: {fileID: 2592538160584570768}
   - component: {fileID: 2592538160584570769}
   - component: {fileID: 2495728958486221763}
-  - component: {fileID: 3046462395371716497}
   m_Layer: 6
   m_Name: Pencil
   m_TagString: Pen
@@ -307,17 +306,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 1140011264404560439}
---- !u!114 &3046462395371716497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2592538160584570775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a575a0ddb1fa774680a5088f28d3a8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groupParent: {fileID: 0}
+  interactableObjects:
+  - {fileID: 1140011264404560439}
