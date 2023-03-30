@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007748558527794618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.191, z: 0.012}
+  m_LocalPosition: {x: 0, y: 0.129, z: 0.012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -213,7 +213,7 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls: []
-  threshold: 0.5
+  threshold: 0.8
   deadZone: 0.025
   character: 
   onKeyDown:
@@ -222,6 +222,8 @@ MonoBehaviour:
   onKeyUp:
     m_PersistentCalls:
       m_Calls: []
+  heightMax: 0.129
+  heightMin: 0.1
 --- !u!1 &5007748559417890146
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,10 +38,7 @@ TagManager:
   - GrabIgnoreRay
   - Key
   - IgnoreKey
-  - 
-  - 
-  - 
-  - 
+  - GrabInteractPlayer
   - 
   - 
   - 
