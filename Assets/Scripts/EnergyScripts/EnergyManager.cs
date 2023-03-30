@@ -31,10 +31,10 @@ public class EnergyManager : MonoBehaviour
 
     void Start()
     {
-        //coffeeCup = FindObjectOfType<CoffeeCup>();
-        //coffeeCup.onDrink.AddListener(AddPoints);
+        coffeeCup = FindObjectOfType<CoffeeCup>();
+        coffeeCup.onDrink.AddListener(AddPoints);
         bottleWater = FindObjectOfType<BottleWater>();
-        bottleWater.onDrink.AddListener(AddHydration);
+        //bottleWater.onDrink.AddListener(AddHydration);
     }
 
     public void AddPoints(float amount)

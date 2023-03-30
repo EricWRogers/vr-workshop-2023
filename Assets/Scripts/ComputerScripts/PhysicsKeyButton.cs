@@ -26,8 +26,10 @@ public class PhysicsKeyButton : PhysicsButton
         onKeyUp.Invoke(character);
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Clamp(transform.localPosition.y, heightMin, heightMax), transform.localPosition.z);
     }
 }

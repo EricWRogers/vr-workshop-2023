@@ -213,7 +213,7 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls: []
-  threshold: 0.5
+  threshold: 0.8
   deadZone: 0.025
   character: 
   onKeyDown:
