@@ -59,5 +59,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: YellowStickyNote
       objectReference: {fileID: 0}
+    - target: {fileID: 8029743470847459080, guid: 88d8ad787d6bd6d46b2b45305190f24a, type: 3}
+      propertyPath: interactableObject
+      value: 
+      objectReference: {fileID: 7601928719244580050}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88d8ad787d6bd6d46b2b45305190f24a, type: 3}
+--- !u!1 &7601928719244580050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3572181962199233342, guid: 88d8ad787d6bd6d46b2b45305190f24a, type: 3}
+  m_PrefabInstance: {fileID: 6407928981355014124}
+  m_PrefabAsset: {fileID: 0}

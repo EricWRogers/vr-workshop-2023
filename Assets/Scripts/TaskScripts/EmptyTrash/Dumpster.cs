@@ -3,16 +3,25 @@ using UnityEngine.Events;
 
 public class Dumpster : MonoBehaviour
 {
+    private Trash_Task task;
+
+    private void Start()
+    {
+        task = FindObjectOfType<Trash_Task>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Trash"))
         {
-            other.GetComponent<Trash>().Trash_Task();
+            task.UpdateTask();
+            Destroy(other.gameObject);
 
-            FindObjectOfType<Trash_Task>().SpawnFX(transform.position, Quaternion.identity);
-
-            Debug.Log("Taking out the trash");
-
+            if (task.currentAmount >= task.requiredAmount)
+            {
+                task.CompleteTask(task);
+                task.SpawnFX(transform.position);
+            }
         }
     }
 }
