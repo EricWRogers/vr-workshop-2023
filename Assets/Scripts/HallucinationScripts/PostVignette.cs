@@ -4,39 +4,33 @@ using UnityEngine;
 
 public class PostVignette : HallucinationEvent
 {
-    public GameObject vignetteObj;
-    bool isOn = false;
+    public GameObject floorParticle;
+    // bool isOn = false;
 
     public override void PerformHallucinationEvent()
     {
         base.PerformHallucinationEvent();
 
-        vTurnOn();
+        FloorChange();
 
         FinishHallucinationEvent();
     }
 
-    public void testVignette()
+    public void FloorChange()
     {
-        if (isOn == false)
+        if(floorParticle == false)
         {
-            vTurnOn();
+            floorParticle.SetActive(true);
+            //isOn = true;
+            Debug.Log("Floor particle on");
         }
-        else if (isOn == true)
+        /*else if(floorParticle == true)
         {
-            vTurnOff();
+            floorParticle.SetActive(false);
+            //isOn = false;
+            Debug.Log("Floor particle off");
         }
-    }
-
-    public void vTurnOn()
-    {
-        vignetteObj.SetActive(true);
-        isOn = true;
-    }
-
-    public void vTurnOff()
-    {
-        vignetteObj.SetActive(false);
-        isOn = false;
+        else
+            Debug.Log("something is wrong " + floorParticle);*/
     }
 }
