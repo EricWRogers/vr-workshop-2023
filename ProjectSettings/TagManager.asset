@@ -22,6 +22,8 @@ TagManager:
   - WaterDrop
   - PlayerMouth
   - screen
+  - TV
+  - PortUSB
   layers:
   - Default
   - TransparentFX
