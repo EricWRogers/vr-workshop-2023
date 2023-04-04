@@ -52,22 +52,19 @@ public class HallucinationEvent : MonoBehaviour
         if(hallucinationTier == Tier.Low)
         {
             globalVol.GetComponent<Animator>().Play("vignetteLowPulse", 0, 0);
-            Debug.Log("Low Tier Hallucination Begin");
         }
         else if(hallucinationTier == Tier.Medium)
         {
             globalVol.GetComponent<Animator>().Play("vignetteMidPulse", 0, 0);
-            Debug.Log("Mid Tier Hallucination Begin");
         }
         else if(hallucinationTier == Tier.High)
         {
             globalVol.GetComponent<Animator>().Play("vignetteHighPulse", 0, 0);
-            Debug.Log("High Tier Hallucination Begin");
         }
         else
         {
             globalVol.GetComponent<Animator>().Play("vignetteNone", 0, 0);
-            Debug.Log("Hallucination Tier Unspecified");
+            Debug.LogError("Something is wrong with Tier Enum");
         }
     }
 

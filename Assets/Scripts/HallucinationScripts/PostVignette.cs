@@ -13,7 +13,7 @@ public class PostVignette : HallucinationEvent
 
         FloorChange();
 
-        FinishHallucinationEvent();
+        //FinishHallucinationEvent();
     }
 
     public void FloorChange()
@@ -24,13 +24,13 @@ public class PostVignette : HallucinationEvent
             //isOn = true;
             Debug.Log("Floor particle on");
         }
-        /*else if(floorParticle == true)
+        else if(floorParticle == true)
         {
             floorParticle.SetActive(false);
             //isOn = false;
             Debug.Log("Floor particle off");
         }
         else
-            Debug.Log("something is wrong " + floorParticle);*/
+            Debug.Log("something is wrong " + floorParticle);
     }
 }
