@@ -19,6 +19,6 @@ public class GameOverManager : MonoBehaviour
 
     public void Reload()
     {
-        SceneManager.LoadScene(SceneManager.GetSceneByName("OfficeScene").buildIndex);
+        SceneManager.LoadScene(0);
     }
 }

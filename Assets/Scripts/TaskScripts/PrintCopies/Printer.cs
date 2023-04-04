@@ -36,8 +36,14 @@ public class Printer : MonoBehaviour
     {
         if (documentToCopy != null)
         {
-            Instantiate(documentToCopy, spawnPoint.position, Quaternion.identity);
+            Instantiate(documentToCopy.transform.parent, spawnPoint.position, Quaternion.identity);
             task.UpdateTask();
+
+            if (task.currentAmount >= task.requiredAmount)
+            {
+                task.CompleteTask(task);
+                task.SpawnFX(transform.position);
+            }
         }
     }
 }

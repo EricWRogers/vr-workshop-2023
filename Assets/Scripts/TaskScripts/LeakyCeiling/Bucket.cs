@@ -33,6 +33,7 @@ public class Bucket : MonoBehaviour
             //task complete
             task.UpdateTask();
             task.CompleteTask(task);
+            task.SpawnFX(transform.position);
             Destroy(GameObject.FindGameObjectWithTag("WaterDrop"));
         }
             
