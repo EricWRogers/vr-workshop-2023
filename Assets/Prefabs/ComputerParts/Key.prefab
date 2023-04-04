@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5007748558052918964}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5007748558527794623}
   - component: {fileID: 5007748558527794620}
   - component: {fileID: 1928316379978635037}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PushPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007748558527794618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.121, z: 0}
+  m_LocalPosition: {x: 0, y: 0.129, z: 0.012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -98,7 +98,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!153 &5007748558527794620
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ ConfigurableJoint:
   m_ConnectedBody: {fileID: 5007748559417890149}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
@@ -124,8 +124,8 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.02
-    bounciness: 0
+    limit: 0.001
+    bounciness: 1
     contactDistance: 0
   m_AngularXLimitSpring:
     spring: 0
@@ -149,7 +149,7 @@ ConfigurableJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetPosition: {x: 0, y: 0.202, z: 0}
   m_TargetVelocity: {x: 0, y: 0, z: 0}
   m_XDrive:
     serializedVersion: 3
@@ -213,7 +213,7 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls: []
-  threshold: 0.1
+  threshold: 0.8
   deadZone: 0.025
   character: 
   onKeyDown:
@@ -222,6 +222,8 @@ MonoBehaviour:
   onKeyUp:
     m_PersistentCalls:
       m_Calls: []
+  heightMax: 0.129
+  heightMin: 0.1
 --- !u!1 &5007748559417890146
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +237,7 @@ GameObject:
   - component: {fileID: 5007748559417890151}
   - component: {fileID: 5007748559417890148}
   - component: {fileID: 5007748559417890149}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,8 +252,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007748559417890146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000000032945}
-  m_LocalScale: {x: 0.23031321, y: 0.048638474, z: 0.25355953}
+  m_LocalPosition: {x: 0, y: 0.102, z: -0.000000032945}
+  m_LocalScale: {x: 0.23031321, y: 0.014200879, z: 0.25355953}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5007748558052918964}
@@ -272,7 +274,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007748559417890146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -349,7 +351,7 @@ GameObject:
   - component: {fileID: 5007748559450419678}
   - component: {fileID: 5007748559450419679}
   - component: {fileID: 5408425208844841483}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +447,7 @@ GameObject:
   - component: {fileID: 955932942277962491}
   - component: {fileID: 448186900825421324}
   - component: {fileID: 3817198003476891786}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

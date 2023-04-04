@@ -264,7 +264,6 @@ GameObject:
   - component: {fileID: 8727074872183799420}
   - component: {fileID: 8727074872183799411}
   - component: {fileID: 8727074872183799410}
-  - component: {fileID: 8727074872183799423}
   - component: {fileID: 4326068815026112432}
   m_Layer: 6
   m_Name: Sphere
@@ -506,22 +505,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &8727074872183799423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8727074872183799408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2b8b84d8d7b644f8416226a3288991, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TrashBags: 0
-  TrashEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4326068815026112432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 0}
+  interactableObjects:
+  - {fileID: 8727074872183799408}
 --- !u!1 &8727074872812786557
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,4 +822,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 0}
+  interactableObjects:
+  - {fileID: 740207252788092586}

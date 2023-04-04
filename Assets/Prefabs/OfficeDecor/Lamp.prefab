@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 323710026035929131}
   - component: {fileID: 5402098012875810673}
   - component: {fileID: 323710026035929132}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8532112337449539049}
   - component: {fileID: 4972005802519513471}
   - component: {fileID: 410744681623935135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: switch3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4050645140581448230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 2509821885860571940}
   - component: {fileID: 2417892391626555851}
   - component: {fileID: 2509821885860571941}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: connection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 0}
+  interactableObjects:
+  - {fileID: 189956935814264335}
+  - {fileID: 5260967551520609105}
+  - {fileID: 7105054128137972171}
+  - {fileID: 850595882257389756}
+  - {fileID: 7390750553126280651}
 --- !u!1 &7105054128137972171
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +536,7 @@ GameObject:
   - component: {fileID: 5354266499588603581}
   - component: {fileID: 7652185951854241102}
   - component: {fileID: 7105054128137972172}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +633,7 @@ GameObject:
   - component: {fileID: 91907649218717522}
   - component: {fileID: 7124725973171217360}
   - component: {fileID: 1225207728951623257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: switch4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
