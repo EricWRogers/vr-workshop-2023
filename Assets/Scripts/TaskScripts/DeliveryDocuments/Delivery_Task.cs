@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Delivery_Task : Task
 {
-   int Delivered = 0;
+    public int Delivered = 0;
     public void DeliveryTask()
-    {
-        
+    {     
         Delivered++;
-        if (Delivered >= requiredAmount)
+        if (Delivered >= 2)
         {
             CompleteTask(this);
         }
