@@ -1,19 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StampForm : MonoBehaviour
 {
-    public bool Approved = false;
-    public bool Denied = false;
+    public Transform spawnPoint;
+    private bool Approved = false;
+    private bool Denied = false;
     public Rigidbody rigidbody;
     public GameObject ApprovedMark;
     public GameObject DeniedMark;
+    public GameObject Form;
+    public bool info;
+    public bool Ruined = false;
+    public bool ReadyToSubmit = false;
+    int randomNumber;
+    [HideInInspector]
+    public UnityEvent stampedEvent = new UnityEvent();
+    private StampFormTask task;
 
     // Start is called before the first frame update
     void Start()
     {
+        task = FindObjectOfType<StampFormTask>();
+
         rigidbody = GetComponent<Rigidbody>();
+
+        randomNumber = Random.Range(1, 3);
+
+        if (randomNumber == 1)
+        {
+            info = false;
+            //FalseInfo.SetActive(true);
+        }
+        else
+        {
+            info = true;
+            //TrueInfo.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -23,7 +48,18 @@ public class StampForm : MonoBehaviour
             if (Denied == false && Approved == false)
             {
                 ApprovedMark.SetActive(true);
-                Debug.Log("Form Approved");
+                
+
+                if(info == false)
+                {
+                    Ruined = true;
+                    Instantiate(Form, spawnPoint.position, Quaternion.identity);
+                }
+                else
+                {
+                    ReadyToSubmit = true;
+                    task.UpdateTask();
+                }
             }
         }
 
@@ -32,8 +68,20 @@ public class StampForm : MonoBehaviour
             if (Denied == false && Approved == false)
             {
                 DeniedMark.SetActive(true);
-                Debug.Log("Form Approved");
+                
+
+                if (info == true)
+                {
+                    Ruined = true;
+                    Instantiate(Form, spawnPoint.position, Quaternion.identity);
+                }
+                else
+                {
+                    ReadyToSubmit = true;
+                    task.UpdateTask();
+                }
             }
+            
         }
     }
 }
