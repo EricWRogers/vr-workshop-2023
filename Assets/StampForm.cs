@@ -59,6 +59,12 @@ public class StampForm : MonoBehaviour
                 {
                     ReadyToSubmit = true;
                     task.UpdateTask();
+
+                    if (task.currentAmount >= task.requiredAmount)
+                    {
+                        task.CompleteTask(task);
+                        task.SpawnFX(transform.position);
+                    }
                 }
             }
         }
@@ -79,6 +85,12 @@ public class StampForm : MonoBehaviour
                 {
                     ReadyToSubmit = true;
                     task.UpdateTask();
+
+                    if (task.currentAmount >= task.requiredAmount)
+                    {
+                        task.CompleteTask(task);
+                        task.SpawnFX(transform.position);
+                    }
                 }
             }
             

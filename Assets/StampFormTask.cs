@@ -15,7 +15,6 @@ public class StampFormTask : Task
     private void ManageTask()
     {
         if (currentAmount >= requiredAmount)
-            Debug.Log("Task done");
             CompleteTask(this);
             
     }
