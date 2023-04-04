@@ -37,10 +37,10 @@ TagManager:
   - Highlight
   - StapledPaper
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - GrabIgnoreRay
+  - Key
+  - IgnoreKey
+  - GrabInteractPlayer
   - 
   - 
   - 

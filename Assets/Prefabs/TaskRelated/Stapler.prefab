@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 272083864307957228}
   - component: {fileID: 272083864307957230}
   - component: {fileID: 272083864307957229}
+  - component: {fileID: 1383011311}
   m_Layer: 6
   m_Name: Stapler
   m_TagString: Untagged
@@ -76,7 +77,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -112,10 +113,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1383011311}
+        m_TargetAssemblyTypeName: Highlight, Assembly-CSharp
+        m_MethodName: HighlightObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1383011311}
+        m_TargetAssemblyTypeName: Highlight, Assembly-CSharp
+        m_MethodName: DehighlightObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -198,6 +223,22 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1383011311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272083864307957219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableObjects:
+  - {fileID: 2504689393490285751}
+  - {fileID: 3009191129023447967}
+  - {fileID: 2590644062339851626}
 --- !u!1 &1238769187318698278
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +285,7 @@ GameObject:
   - component: {fileID: 2366877589332475114}
   - component: {fileID: 6911091114322968907}
   - component: {fileID: 6911091114322968906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: stapler_metal
   m_TagString: Pen
   m_Icon: {fileID: 0}
@@ -331,9 +372,6 @@ MonoBehaviour:
   staplePoint: {fileID: 272083863435180605}
   staple: {fileID: 5555271795333469538, guid: c18e91fcea2a32242bee9b18673c9e81, type: 3}
   requiredDistance: 0.2
-  StapleEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &6911091114322968906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -444,8 +482,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.92186, y: 7.3717504, z: 62.190483}
-  m_Center: {x: 0, y: 1.4934347, z: 25.114418}
+  m_Size: {x: 13.92186, y: 4.957944, z: 62.190483}
+  m_Center: {x: 0.00000042656023, y: 0.28653088, z: 25.114418}
 --- !u!54 &2590644062339851540
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -471,10 +509,10 @@ HingeJoint:
   m_GameObject: {fileID: 2590644062339851626}
   m_ConnectedBody: {fileID: 272083864307957230}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 7.3154855, z: 0}
+  m_Anchor: {x: 0, y: 7.3154855, z: 1.99}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.000000037252903, y: 0.09294176, z: -0.22836122}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -485,10 +523,10 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: 0
-    max: 0
+    min: -40.558838
+    max: 70.93551
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -641,7 +679,7 @@ HingeJoint:
   m_UseLimits: 1
   m_Limits:
     min: -20
-    max: 21.528183
+    max: 20.647121
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0

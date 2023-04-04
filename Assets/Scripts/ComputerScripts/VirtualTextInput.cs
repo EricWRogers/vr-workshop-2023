@@ -24,6 +24,7 @@ public class VirtualTextInput : MonoBehaviour
 
     private void AppendText(string _text)
     {
+        Debug.Log("Appened");
         if (isActive)
         {
             if (text.text.Length >= requiredTextAmount)
