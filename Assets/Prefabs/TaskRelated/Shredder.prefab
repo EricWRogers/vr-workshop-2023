@@ -32,8 +32,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4543618440567381684}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6848701, y: 0.6848701, z: 0.51200354}
+  m_LocalPosition: {x: -0, y: -0.0045359, z: 0}
+  m_LocalScale: {x: 0.6848701, y: 0.8496267, z: 0.51200354}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6432800710132014786}
@@ -159,7 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 4543618440567381684}
+  interactableObjects:
+  - {fileID: 4543618440567381684}
 --- !u!114 &9028370076037043536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6432800709058364330}
   - component: {fileID: 6432800709058364331}
+  - component: {fileID: 1952223385}
   m_Layer: 6
   m_Name: Top Collision
   m_TagString: Untagged
@@ -327,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6432800709058364245}
   m_LocalRotation: {x: 0.13372678, y: 0, z: 0, w: 0.9910183}
-  m_LocalPosition: {x: 0.099, y: 0.3565, z: -0.043}
+  m_LocalPosition: {x: 0.0933, y: 0.426, z: -0.041}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,6 +349,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.65793663, y: 0.016566336, z: 0.023468193}
   m_Center: {x: -0.097707555, y: 0.0010960645, z: 0.019972764}
+--- !u!114 &1952223385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6432800709058364245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fb67bb37d22484f8d97066d108b0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paperParticle: {fileID: 0}
+  shredParticleLocation: {x: 0, y: 0, z: 0}
+  shredParticleRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6432800710132014797
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +373,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6432800710132014786}
-  - component: {fileID: 6432800710132014787}
   m_Layer: 6
   m_Name: Shredder
   m_TagString: Shredder
@@ -373,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 6432800710132014797}
   m_LocalRotation: {x: 0, y: 0.7093862, z: 0, w: 0.70482004}
   m_LocalPosition: {x: -3.646, y: -6.9660006, z: -2.4299994}
-  m_LocalScale: {x: 1, y: 1.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6432800709058364330}
@@ -381,18 +397,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.37, z: 0}
---- !u!114 &6432800710132014787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6432800710132014797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fb67bb37d22484f8d97066d108b0b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paperParticle: {fileID: 0}
-  shredParticleLocation: {x: 0, y: 0, z: 0}
-  shredParticleRotation: {x: 0, y: 0, z: 0, w: 0}

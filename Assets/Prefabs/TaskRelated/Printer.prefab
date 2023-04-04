@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 651864497728374711}
   - component: {fileID: 651864497728374706}
   - component: {fileID: 651864497728374710}
-  - component: {fileID: 638408622}
   - component: {fileID: 638408627}
   m_Layer: 0
   m_Name: Printer
@@ -60,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 651864497728374707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.531, y: 0.589, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9517559, y: 1.9517559, z: 1.9517559}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 843427133}
@@ -95,30 +94,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.4216099, z: 1.25}
   m_Center: {x: 0, y: 0.08580494, z: 0}
---- !u!114 &638408622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651864497728374707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 815f9f45dd547ff4cbb4f5440ed71589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taskName: 
-  taskDescription: 
-  requiredAmount: 0
-  completeParticles: {fileID: 0}
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  onTaskUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-  currentAmount: 0
-  currentText: 
 --- !u!114 &638408627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +252,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhysicsButton
       objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423785, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_Constraints
+      value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423785, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423786, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_Axis.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423786, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_XMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423786, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_YMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423786, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -4.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423786, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423786, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -42.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 890965471945423787, guid: acd4dab6f54815442b63674193c72771, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd4dab6f54815442b63674193c72771, type: 3}
 --- !u!4 &1253525292375082358 stripped
@@ -284,3 +295,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 890965471852063116, guid: acd4dab6f54815442b63674193c72771, type: 3}
   m_PrefabInstance: {fileID: 2105488887468879098}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1253525292466345814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 890965471945423788, guid: acd4dab6f54815442b63674193c72771, type: 3}
+  m_PrefabInstance: {fileID: 2105488887468879098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1405170192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253525292466345814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc7496bd69848b4383a7ffe23228940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  threshold: 0.1
+  deadZone: 0.025

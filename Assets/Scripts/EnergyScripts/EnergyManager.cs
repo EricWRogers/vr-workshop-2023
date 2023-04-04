@@ -12,8 +12,10 @@ public class EnergyManager : MonoBehaviour
 
     public bool hasWater { get { return waterBar.slider.value > 0.0f; } }
     public string sceneName;
-    public float energyLeft = 0;
-    public float hydrationLeft = 0;
+    private float minValue = 0.0f;
+    private float maxValue = 1.0f;
+    public float energyLeft = 0.0f;
+    public float hydrationLeft = 0.0f; // { get; set { Mathf.Clamp(value, 0, 1); } }
     public float waterLossRate = 0.01f;
     public float energyLossRate = 0.01f;
     public EnergyBar energyBar;
@@ -31,19 +33,21 @@ public class EnergyManager : MonoBehaviour
     {
         coffeeCup = FindObjectOfType<CoffeeCup>();
         coffeeCup.onDrink.AddListener(AddPoints);
-        //bottleWater = FindObjectOfType<BottleWater>();
+        bottleWater = FindObjectOfType<BottleWater>();
         //bottleWater.onDrink.AddListener(AddHydration);
     }
 
     public void AddPoints(float amount)
     {
         energyLeft += amount;
+        energyLeft = Mathf.Clamp(energyLeft, minValue, maxValue);
         energyBar.slider.value = energyLeft;
     }
 
     public void AddHydration(float waterAmount)
     {
         hydrationLeft += waterAmount;
+        hydrationLeft = Mathf.Clamp(hydrationLeft, minValue, maxValue);
         waterBar.slider.value =+ hydrationLeft;
     }
 
