@@ -2,37 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PostVignette : HallucinationEvent
+public class PostVignette : MonoBehaviour
 {
-    public GameObject floorParticle;
-    // bool isOn = false;
-
-    public override void PerformHallucinationEvent()
+    public void GetVignetteTurnOff()
     {
-        base.PerformHallucinationEvent();
-
-        FloorChange();
-
-        //FinishHallucinationEvent();
-    }
-
-    public void FloorChange()
-    {
-
-        floorParticle.SetActive(true);
-        //if(!floorParticle.activeSelf)
-        //{
-        //    floorParticle.SetActive(true);
-        //    //isOn = true;
-        //    Debug.Log("Floor particle on");
-        //}
-        //else if(floorParticle.activeSelf)
-        //{
-        //    floorParticle.SetActive(false);
-        //    //isOn = false;
-        //    Debug.Log("Floor particle off");
-        //}
-        //else
-        //    Debug.Log("something is wrong " + floorParticle);
+        // real jank way of getting the turn off function to the animation event
+        FindObjectOfType<HallucinationEvent>().GetComponent<HallucinationEvent>().VignetteTurnOff();
     }
 }

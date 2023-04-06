@@ -41,7 +41,7 @@ public class HallucinationEvent : MonoBehaviour
     public void FinishHallucinationEvent()
     {
         hallucinationEnded.Invoke();
-        VignetteTurnOff();
+        //VignetteTurnOff();
         isActive = false;
     }
 
@@ -69,7 +69,7 @@ public class HallucinationEvent : MonoBehaviour
         }
     }
 
-    private void VignetteTurnOff()
+    public void VignetteTurnOff()
     {
         globalVol = GameObject.Find("vignetteGlobalVolume");
         globalVol.SetActive(false);
