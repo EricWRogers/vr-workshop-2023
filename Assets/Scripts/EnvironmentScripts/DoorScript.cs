@@ -28,7 +28,7 @@ public class DoorScript : MonoBehaviour
             {
                 doorTimer.StartTimer(timeToDoorClose, doorTimer.AutoRestart);
                 Debug.Log("trigger Here");
-                Debug.Log("trigger" + isDoorOpen);
+                Debug.Log("trigger2" + isDoorOpen);
                 doorAnimation.SetTrigger("OnDoorOpen");
                 isDoorOpen = true;
             }
@@ -61,6 +61,7 @@ public class DoorScript : MonoBehaviour
         if (dist > maxDistance)
         {
             doorAnimation.SetTrigger("OnDoorClose");
+            isDoorOpen = false;
         }
         else
         {

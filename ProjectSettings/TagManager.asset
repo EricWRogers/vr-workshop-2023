@@ -24,6 +24,9 @@ TagManager:
   - screen
   - TV
   - PortUSB
+  - ApproveStamp
+  - DenyStamp
+  - Delivery
   layers:
   - Default
   - TransparentFX
@@ -37,13 +40,10 @@ TagManager:
   - Highlight
   - StapledPaper
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GrabIgnoreRay
+  - Key
+  - IgnoreKey
+  - GrabInteractPlayer
   - 
   - 
   - 
