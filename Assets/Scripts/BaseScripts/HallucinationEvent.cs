@@ -13,7 +13,7 @@ public class HallucinationEvent : MonoBehaviour
     public Tier hallucinationTier;
     [Tooltip("Set this to true if your code in PerformEvent needs to be called in Update.")]
     public bool needsUpdate = false;
-    public GameObject globalVol;
+    private GameObject globalVol;
 
     //We use a static bool here because we may need to know if ANY event is active not just this one particularly
     [HideInInspector]
@@ -47,6 +47,7 @@ public class HallucinationEvent : MonoBehaviour
 
     private void VignetteTurnOn()
     {
+        globalVol= GameObject.Find("vignetteGlobalVolume"); 
         globalVol.SetActive(true);
 
         if(hallucinationTier == Tier.Low)
@@ -68,8 +69,9 @@ public class HallucinationEvent : MonoBehaviour
         }
     }
 
-    private void VignetteTurnOff() 
+    private void VignetteTurnOff()
     {
+        globalVol = GameObject.Find("vignetteGlobalVolume");
         globalVol.SetActive(false);
     }
 }
