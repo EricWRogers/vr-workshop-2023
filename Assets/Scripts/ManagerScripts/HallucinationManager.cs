@@ -57,14 +57,29 @@ public class HallucinationManager : MonoBehaviour
                 switch (energySystem.GetTier())
                 {
                     case Tier.High:
+                        if (highEvents.Count == 0)
+                        {
+                            Debug.Log("No High Events");
+                            break;
+                        }
                         currentHallucination = highEvents[Random.Range(0, highEvents.Count)];
                         DoEvent(currentHallucination);
                         break;
                     case Tier.Medium:
+                        if (mediumEvents.Count == 0)
+                        {
+                            Debug.Log("No Medium Events");
+                            break;
+                        }
                         currentHallucination = mediumEvents[Random.Range(0, mediumEvents.Count)];
                         DoEvent(currentHallucination);
                         break;
                     case Tier.Low:
+                        if (lowEvents.Count == 0)
+                        {
+                            Debug.Log("No Low Events");
+                            break;
+                        }
                         currentHallucination = lowEvents[Random.Range(0, lowEvents.Count)];
                         DoEvent(currentHallucination);
                         break;
