@@ -18,19 +18,21 @@ public class PostVignette : HallucinationEvent
 
     public void FloorChange()
     {
-        if(floorParticle == false)
-        {
-            floorParticle.SetActive(true);
-            //isOn = true;
-            Debug.Log("Floor particle on");
-        }
-        else if(floorParticle == true)
-        {
-            floorParticle.SetActive(false);
-            //isOn = false;
-            Debug.Log("Floor particle off");
-        }
-        else
-            Debug.Log("something is wrong " + floorParticle);
+
+        floorParticle.SetActive(true);
+        //if(!floorParticle.activeSelf)
+        //{
+        //    floorParticle.SetActive(true);
+        //    //isOn = true;
+        //    Debug.Log("Floor particle on");
+        //}
+        //else if(floorParticle.activeSelf)
+        //{
+        //    floorParticle.SetActive(false);
+        //    //isOn = false;
+        //    Debug.Log("Floor particle off");
+        //}
+        //else
+        //    Debug.Log("something is wrong " + floorParticle);
     }
 }
