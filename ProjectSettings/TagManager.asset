@@ -23,6 +23,9 @@ TagManager:
   - PlayerMouth
   - screen
   - LunchBox
+  - ApproveStamp
+  - DenyStamp
+  - Delivery
   layers:
   - Default
   - TransparentFX
@@ -40,9 +43,6 @@ TagManager:
   - Key
   - IgnoreKey
   - GrabInteractPlayer
-  - 
-  - 
-  - 
   - 
   - 
   - 
