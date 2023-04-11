@@ -24,6 +24,7 @@ TagManager:
   - screen
   - TV
   - PortUSB
+  - LunchBox
   - ApproveStamp
   - DenyStamp
   - Delivery
