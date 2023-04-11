@@ -22,13 +22,13 @@ public class TvScreenScript : MonoBehaviour
             counter = 0;
         }
 
-        tvScreen.GetComponent<MeshRenderer>().material= slides[counter];
+        tvScreen.GetComponent<MeshRenderer>().material = slides[counter];
         counter++;
     }
 
     private void OnCollisionEnter(Collision tvScreen)
     {
-
+        
     }
 
 
@@ -36,7 +36,7 @@ public class TvScreenScript : MonoBehaviour
     void Start()
     {
 
-        timer = GetComponent<Timer>();
+        timer = GetComponentInChildren<Timer>();
 
         timer.TimeOut.AddListener(slideshow);
 
