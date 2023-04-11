@@ -622,6 +622,7 @@ MonoBehaviour:
   hallucinationName: FloorSprites
   hallucinationTier: 0
   needsUpdate: 0
+  globalVol: {fileID: 6238210358831678407, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
   hallucinationStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -2273,7 +2274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6238210358831678407, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6238210358831678409, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
       propertyPath: m_RootOrder
