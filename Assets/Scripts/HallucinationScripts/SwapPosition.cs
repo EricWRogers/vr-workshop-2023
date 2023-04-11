@@ -8,15 +8,6 @@ public class SwapPosition : HallucinationEvent
     public GameObject object2;
     private Vector3 tempPos;
 
-    public void Update()
-    {
-
-        tempPos = object1.transform.position;
-        object1.transform.position = object2.transform.position;
-        object2.transform.position = tempPos;
-    }
-
-
     public override void PerformHallucinationEvent()
     {
         base.PerformHallucinationEvent();
