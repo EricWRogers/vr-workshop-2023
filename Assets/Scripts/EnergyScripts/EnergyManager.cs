@@ -34,7 +34,7 @@ public class EnergyManager : MonoBehaviour
         coffeeCup = FindObjectOfType<CoffeeCup>();
         coffeeCup.onDrink.AddListener(AddPoints);
         bottleWater = FindObjectOfType<BottleWater>();
-        //bottleWater.onDrink.AddListener(AddHydration);
+        bottleWater.onDrink.AddListener(AddHydration);
     }
 
     public void AddPoints(float amount)
