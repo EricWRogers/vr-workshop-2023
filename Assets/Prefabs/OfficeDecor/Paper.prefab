@@ -203,7 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 0}
+  interactableObjects:
+  - {fileID: 7981195191777686031}
 --- !u!1 &7981195191777686031
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +217,7 @@ GameObject:
   - component: {fileID: 8631735579727095738}
   - component: {fileID: 3344946781097790085}
   - component: {fileID: 2317325877539597843}
+  - component: {fileID: 4693073958997274565}
   m_Layer: 6
   m_Name: Model
   m_TagString: Paper
@@ -230,14 +232,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7981195191777686031}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.70432454, y: 0, z: 0, w: 0.70987815}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.22494969, y: 0.0045120367, z: 0.27974233}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1457659034414742079}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.55, y: 0, z: 0}
 --- !u!33 &8631735579727095738
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -266,7 +268,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d86198530df689418503b2f8c3899ac, type: 2}
+  - {fileID: 2100000, guid: 82fd2d82a91bd81418271622e918f0ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -301,3 +303,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4693073958997274565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981195191777686031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838a8d0f42f3aa34e8307dab2603bb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 0}
+  textureSize: {x: 0.53, y: 0.65}
