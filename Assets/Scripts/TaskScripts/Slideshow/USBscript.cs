@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SuperPupSystems.Helper;
 
-public class USBScript : MonoBehaviour
+public class USBscript : MonoBehaviour
 {
     public Animator animator;
     public string SlideShowAnim = "SlideShowAnim";
