@@ -22,6 +22,7 @@ TagManager:
   - WaterDrop
   - PlayerMouth
   - screen
+  - Worker
   layers:
   - Default
   - TransparentFX

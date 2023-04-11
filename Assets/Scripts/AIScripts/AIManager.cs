@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using SuperPupSystems.Helper;
 
 [System.Serializable]
-public struct Destination
+public class Destination
 {
     public Transform destination;
     public float waitTime;
@@ -14,15 +14,17 @@ public struct Destination
 
 public class AIManager : MonoBehaviour
 {
-    public List<Destination> positions = new List<Destination>();
+    public List<Destination> destinations = new List<Destination>();
     public UnityEvent onPathComplete = new UnityEvent();
-
+    public float talkTime = 5f;
+    public float talkCooldown = 7f;
 
     private List<Vector3> occupiedPositions = new List<Vector3>();
     private NavMeshAgent agent;
-    private bool setNewDestination = false;
     private Timer timer;
-    private Destination? currentDestination;
+    private Destination currentDestination;
+    private NavMeshAgent otherAgent;
+    private bool canTalk = true;
 
     private void Start()
     {
@@ -30,34 +32,67 @@ public class AIManager : MonoBehaviour
         timer = GetComponent<Timer>();
 
         onPathComplete.AddListener(StartWaitTime);
+        timer.TimeOut.AddListener(FinishTalk);
         currentDestination = Move();
     }
 
     private void Update()
     {
-        if (agent.isStopped && !setNewDestination)
+        if (agent.remainingDistance <= 0f && currentDestination != null)
         {
-            setNewDestination = true;
-
             onPathComplete.Invoke();
             currentDestination = null;
         }
     }
 
-    private Destination Move()
+    private void OnTriggerEnter(Collider other)
     {
-        int index = Random.Range(0, positions.Count);
-        agent.SetDestination(positions[index].destination.position);
-        return positions[index];
+        if (other.CompareTag("Worker") && canTalk)
+        {
+            Debug.Log("HIt");
+            agent.isStopped = true;
+            canTalk = false;
+            timer.StartTimer(talkTime, false);
+
+            otherAgent = other.GetComponent<NavMeshAgent>();
+            otherAgent.isStopped = true;
+            otherAgent.GetComponent<Timer>().StartTimer(otherAgent.GetComponent<AIManager>().talkTime);
+        }
+    }
+
+    private Destination Move(Destination newPosition = null)
+    {
+        int index = Random.Range(0, destinations.Count);
+        agent.SetDestination(destinations[index].destination.position);
+        return destinations[index];
     }
 
     public void StartWaitTime()
     {
-
+        StartCoroutine(Wait());
     }
 
-    public void SetPath()
+    public void ResetTalk()
     {
-        agent.SetDestination(positions[Random.Range(0, positions.Count)].destination.position);
+        Debug.Log("Talk cooldown reset");
+        timer.TimeOut.RemoveAllListeners();
+        timer.TimeOut.AddListener(FinishTalk);
+        canTalk = true;
+    }
+
+    public void FinishTalk()
+    {
+        Debug.Log("Finished Talking");
+        agent.isStopped = false;
+        otherAgent.isStopped = false;
+        timer.TimeOut.RemoveAllListeners();
+        timer.TimeOut.AddListener(ResetTalk);
+        timer.StartTimer(talkCooldown, false);
+    }
+
+    System.Collections.IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(currentDestination.waitTime);
+        currentDestination = Move();
     }
 }
