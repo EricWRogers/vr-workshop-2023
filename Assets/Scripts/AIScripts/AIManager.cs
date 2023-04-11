@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using System.Linq;
 using UnityEngine.Events;
-using SuperPupSystems.Helper;
+using OmnicatLabs.Managers;
 
 [System.Serializable]
 public class Destination
@@ -19,20 +19,21 @@ public class AIManager : MonoBehaviour
     public float talkTime = 5f;
     public float talkCooldown = 7f;
 
-    private List<Vector3> occupiedPositions = new List<Vector3>();
     private NavMeshAgent agent;
-    private Timer timer;
     private Destination currentDestination;
     private NavMeshAgent otherAgent;
     private bool canTalk = true;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        timer = GetComponent<Timer>();
+        if (FindObjectOfType<TimerManager>() == null)
+        {
+            Debug.LogError("Could not find Timer Manager. Make sure there is a Timer Manager somewhere in the scene");
+        }
 
-        onPathComplete.AddListener(StartWaitTime);
-        timer.TimeOut.AddListener(FinishTalk);
+        agent = GetComponent<NavMeshAgent>();
+
+        onPathComplete.AddListener(StartWaitTimer);
         currentDestination = Move();
     }
 
@@ -49,14 +50,16 @@ public class AIManager : MonoBehaviour
     {
         if (other.CompareTag("Worker") && canTalk)
         {
-            Debug.Log("HIt");
+            Debug.Log("Hit");
+            otherAgent = other.GetComponent<NavMeshAgent>();
+            otherAgent.GetComponent<AIManager>().canTalk = false;
+
             agent.isStopped = true;
             canTalk = false;
-            timer.StartTimer(talkTime, false);
 
-            otherAgent = other.GetComponent<NavMeshAgent>();
             otherAgent.isStopped = true;
-            otherAgent.GetComponent<Timer>().StartTimer(otherAgent.GetComponent<AIManager>().talkTime);
+
+            TimerManager.Instance.CreateTimer(talkTime, Resume);
         }
     }
 
@@ -67,32 +70,26 @@ public class AIManager : MonoBehaviour
         return destinations[index];
     }
 
-    public void StartWaitTime()
+    public void StartWaitTimer()
     {
-        StartCoroutine(Wait());
+        TimerManager.Instance.CreateTimer(talkTime, MoveNext);
     }
 
-    public void ResetTalk()
+    public void MoveNext()
     {
-        Debug.Log("Talk cooldown reset");
-        timer.TimeOut.RemoveAllListeners();
-        timer.TimeOut.AddListener(FinishTalk);
-        canTalk = true;
+        currentDestination = Move();
     }
 
-    public void FinishTalk()
+    public void Resume()
     {
-        Debug.Log("Finished Talking");
         agent.isStopped = false;
         otherAgent.isStopped = false;
-        timer.TimeOut.RemoveAllListeners();
-        timer.TimeOut.AddListener(ResetTalk);
-        timer.StartTimer(talkCooldown, false);
+        TimerManager.Instance.CreateTimer(talkCooldown, ResetCooldown);
     }
 
-    System.Collections.IEnumerator Wait()
+    public void ResetCooldown()
     {
-        yield return new WaitForSeconds(currentDestination.waitTime);
-        currentDestination = Move();
+        canTalk = true;
+        otherAgent.GetComponent<AIManager>().canTalk = true;
     }
 }
