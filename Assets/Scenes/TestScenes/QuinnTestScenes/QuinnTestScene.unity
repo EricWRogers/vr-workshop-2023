@@ -620,9 +620,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hallucinationName: FloorSprites
-  hallucinationTier: 0
+  hallucinationTier: 2
   needsUpdate: 0
-  globalVol: {fileID: 6238210358831678407, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
   hallucinationStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -1468,7 +1467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highChanceAdded: 5
   mediumChanceAdded: 3
-  lowChanceAdded: 100
+  lowChanceAdded: 1
   highEvents: []
   mediumEvents: []
   lowEvents: []
@@ -2274,7 +2273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6238210358831678407, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6238210358831678409, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
       propertyPath: m_RootOrder

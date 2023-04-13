@@ -13,7 +13,7 @@ public class HallucinationEvent : MonoBehaviour
     public Tier hallucinationTier;
     [Tooltip("Set this to true if your code in PerformEvent needs to be called in Update.")]
     public bool needsUpdate = false;
-    public GameObject globalVol;
+    private GameObject globalVol;
 
     //We use a static bool here because we may need to know if ANY event is active not just this one particularly
     [HideInInspector]
@@ -41,37 +41,47 @@ public class HallucinationEvent : MonoBehaviour
     public void FinishHallucinationEvent()
     {
         hallucinationEnded.Invoke();
-        //VignetteTurnOff();
         isActive = false;
     }
 
     private void VignetteTurnOn()
     {
-        //globalVol= GameObject.Find("vignetteGlobalVolume"); 
-        globalVol.SetActive(true);
+        globalVol= GameObject.Find("vignetteGlobalVolume");
 
-        if(hallucinationTier == Tier.Low)
+        if (!globalVol)
         {
-            globalVol.GetComponent<Animator>().Play("vignetteLowPulse", 0, 0);
-        }
-        else if(hallucinationTier == Tier.Medium)
-        {
-            globalVol.GetComponent<Animator>().Play("vignetteMidPulse", 0, 0);
-        }
-        else if(hallucinationTier == Tier.High)
-        {
-            globalVol.GetComponent<Animator>().Play("vignetteHighPulse", 0, 0);
+            Debug.LogError("Missing asset in scene, location: Assets/Prefabs/PostProcessing/vignetteGlobalVolume");
         }
         else
         {
-            globalVol.GetComponent<Animator>().Play("vignetteNone", 0, 0);
-            Debug.LogError("Something is wrong with Tier Enum");
+            globalVol.SetActive(true);
+
+            if(hallucinationTier == Tier.Low)
+            {
+                globalVol.GetComponent<Animator>().Play("vignetteLowPulse", 0, 0);
+            }
+            else if(hallucinationTier == Tier.Medium)
+            {
+                globalVol.GetComponent<Animator>().Play("vignetteMidPulse", 0, 0);
+            }
+            else if(hallucinationTier == Tier.High)
+            {
+                globalVol.GetComponent<Animator>().Play("vignetteHighPulse", 0, 0);
+            }
+            else
+            {
+                globalVol.GetComponent<Animator>().Play("vignetteNone", 0, 0);
+                Debug.LogError("Something is wrong with Tier Enum");
+            }
         }
     }
 
     public void VignetteTurnOff()
     {
-        //globalVol = GameObject.Find("vignetteGlobalVolume");
-        globalVol.SetActive(false);
+        globalVol = GameObject.Find("vignetteGlobalVolume");
+        if(!globalVol)
+            Debug.LogError("Missing asset in scene, location: Assets/Prefabs/PostProcessing/vignetteGlobalVolume");
+        else
+            globalVol.GetComponent<Animator>().Play("vignetteNone", 0, 0);
     }
 }
