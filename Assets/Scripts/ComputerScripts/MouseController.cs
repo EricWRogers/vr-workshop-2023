@@ -8,6 +8,7 @@ public class MouseController : MonoBehaviour
     public float speed = 10f;
     public float trackingDistance = .5f;
     public float maxSpeed = 1f;
+    public LayerMask layerMask;
 
     private Rigidbody rb;
     private Vector3 input;
@@ -75,8 +76,10 @@ public class MouseController : MonoBehaviour
 
     public Vector2 GetPhysicalDirection()
     {
+        RaycastHit hit;
         Debug.DrawRay(transform.position, Vector3.down * trackingDistance, Color.green);
-        if (Physics.Raycast(transform.position, Vector3.down, trackingDistance))
+        Physics.Raycast(transform.position, Vector3.down, out hit, trackingDistance, layerMask);
+        if (Physics.Raycast(transform.position, Vector3.down, trackingDistance, layerMask))
             return new Vector2(rb.velocity.x, rb.velocity.z);
         else return Vector2.zero;
     }
