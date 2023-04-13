@@ -15,15 +15,19 @@ public class Highlight : MonoBehaviour
             interactableObjects.Add(gameObject);
         }
 
-        defaultMask = interactableObjects[0].layer;
         highlightMask = LayerMask.NameToLayer("Highlight");
     }
 
     public void HighlightObject()
     {
-        foreach(GameObject obj in interactableObjects)
+        for (int i = 0; i < interactableObjects.Count; i++)
         {
-            obj.layer = highlightMask;
+            if (i == 0)
+            {
+                defaultMask = interactableObjects[i].layer;
+            }
+
+            interactableObjects[i].layer = highlightMask;
         }    
     }
 

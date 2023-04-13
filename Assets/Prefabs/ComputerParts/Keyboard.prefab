@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 5384736293827621034}
   - component: {fileID: 5384736293827621033}
   - component: {fileID: 5384736293827621032}
-  - component: {fileID: 5928442288527652274}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -210,19 +209,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5928442288527652274
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5384736293827621077}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.088243, y: 0.17653, z: 1.8687313}
-  m_Center: {x: 0.008209467, y: 0.124201, z: 3.130057}
 --- !u!1 &5384736294883381184
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +512,8 @@ MonoBehaviour:
   onKeyUp:
     m_PersistentCalls:
       m_Calls: []
+  heightMax: 1
+  heightMin: 1
 --- !u!1 &6293026305817484705
 GameObject:
   m_ObjectHideFlags: 0

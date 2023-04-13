@@ -22,6 +22,9 @@ TagManager:
   - WaterDrop
   - PlayerMouth
   - screen
+  - TV
+  - PortUSB
+  - LunchBox
   - ApproveStamp
   - DenyStamp
   - Delivery
