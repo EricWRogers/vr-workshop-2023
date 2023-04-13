@@ -22,6 +22,12 @@ TagManager:
   - WaterDrop
   - PlayerMouth
   - screen
+  - TV
+  - PortUSB
+  - LunchBox
+  - ApproveStamp
+  - DenyStamp
+  - Delivery
   layers:
   - Default
   - TransparentFX
@@ -35,13 +41,10 @@ TagManager:
   - Highlight
   - StapledPaper
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GrabIgnoreRay
+  - Key
+  - IgnoreKey
+  - GrabInteractPlayer
   - 
   - 
   - 

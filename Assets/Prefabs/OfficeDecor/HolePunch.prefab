@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2966664000661345314}
   - component: {fileID: 952669203704868223}
   - component: {fileID: 2966664000661345315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hittable_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 2130747301554727280}
   - component: {fileID: 462568005993840135}
   - component: {fileID: 2891700745009545184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,4 +463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1711ac271dfe39e43900494ff2689a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 0}
+  interactableObjects:
+  - {fileID: 3766481643140986053}
+  - {fileID: 1037544618853865295}

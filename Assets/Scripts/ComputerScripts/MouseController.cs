@@ -7,7 +7,8 @@ public class MouseController : MonoBehaviour
 {
     public float speed = 10f;
     public float trackingDistance = .5f;
-    public float maxAcceleration = 1f;
+    public float maxSpeed = 1f;
+    public LayerMask layerMask;
 
     private Rigidbody rb;
     private Vector3 input;
@@ -67,12 +68,18 @@ public class MouseController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(input * speed * Time.deltaTime, ForceMode.Force);
+        //if (rb.velocity.magnitude >= maxSpeed)
+        //{
+        //    rb.velocity = new Vector3(rb.velocity.normalized.x * maxSpeed, rb.velocity.normalized.y * maxSpeed, rb.velocity.normalized.z * maxSpeed);
+        //}
     }
 
     public Vector2 GetPhysicalDirection()
     {
+        RaycastHit hit;
         Debug.DrawRay(transform.position, Vector3.down * trackingDistance, Color.green);
-        if (rb.velocity.magnitude > .1f && Physics.Raycast(transform.position, Vector3.down, trackingDistance))
+        Physics.Raycast(transform.position, Vector3.down, out hit, trackingDistance, layerMask);
+        if (Physics.Raycast(transform.position, Vector3.down, trackingDistance, layerMask))
             return new Vector2(rb.velocity.x, rb.velocity.z);
         else return Vector2.zero;
     }

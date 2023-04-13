@@ -11,23 +11,34 @@ public class Phone : MonoBehaviour
     public float chanceForCall = 75f;
     public float timeBetweenRings = 1.5f;
     public int amountOfRings = 3;
+    public BoxCollider mainCollider;
 
     private AnswerPhoneTask task;
     private float currentTalkTime = 0f;
     private int ringCounter = 0;
     private bool isRinging = false;
+    private AudioSource aSrc;
+    private bool isTalking = false;
+    private bool updated = false;
+    private bool finished = false;
 
     private void Start()
     {
+        aSrc = GetComponent<AudioSource>();
         task = FindObjectOfType<AnswerPhoneTask>();
-        DayManager.Instance.GetComponent<Timer>().TimeOut.AddListener(InvokeCall);
+        // DayManager.Instance.GetComponent<Timer>().TimeOut.AddListener(InvokeCall);
+        GetComponent<Timer>().TimeOut.AddListener(InvokeCall);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && isRinging == true)
+        if (other.CompareTag("PlayerMouth") && isRinging && !finished)
         {
+            mainCollider.enabled = false;
+            isTalking = true;
             CancelInvoke("Call");
+            aSrc.Stop();
+            ringCounter = 0;
 
             currentTalkTime += Time.deltaTime;
 
@@ -37,22 +48,26 @@ public class Phone : MonoBehaviour
                 if (task.currentAmount >= task.requiredAmount)
                 {
                     task.CompleteTask(task);
+                    finished = true;
                 }
+                isRinging = false;
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("PlayerMouth"))
         {
             currentTalkTime = 0f;
+            isTalking = false;
+            mainCollider.enabled = true;
         }
     }
 
-    void InvokeCall()
+    public void InvokeCall()
     {
-        if (Random.Range(0f, 100f) > chanceForCall)
+        if (Random.Range(0f, 100f) >= chanceForCall && !isTalking && !finished)
         {
             InvokeRepeating("Call", 0f, timeBetweenRings);
         }
@@ -62,14 +77,16 @@ public class Phone : MonoBehaviour
     {
         if (ringCounter < amountOfRings)
         {
-            //Play ringtone
+            aSrc.Play();
             ringCounter++;
             isRinging = true;
         }
         else
         {
             CancelInvoke("Call");
+            aSrc.Stop();
             isRinging = false;
+            ringCounter = 0;
         }
     }
 }

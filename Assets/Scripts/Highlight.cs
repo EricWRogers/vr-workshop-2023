@@ -6,28 +6,36 @@ public class Highlight : MonoBehaviour
 {
     private int defaultMask;
     private int highlightMask;
-    public GameObject interactableObject;
+    public List<GameObject> interactableObjects = new List<GameObject>();
 
     void Awake()
     {
-        if (interactableObject == null)
+        if (interactableObjects.Count == 0)
         {
-            interactableObject = gameObject;
+            interactableObjects.Add(gameObject);
         }
 
-        defaultMask = interactableObject.layer;
         highlightMask = LayerMask.NameToLayer("Highlight");
     }
 
     public void HighlightObject()
     {
-        interactableObject.layer = highlightMask;
-        Debug.Log("HighLight");
+        for (int i = 0; i < interactableObjects.Count; i++)
+        {
+            if (i == 0)
+            {
+                defaultMask = interactableObjects[i].layer;
+            }
+
+            interactableObjects[i].layer = highlightMask;
+        }    
     }
 
     public void DehighlightObject()
     {
-        interactableObject.layer = defaultMask;
-        Debug.Log("DeHighLight");
+        foreach (GameObject obj in interactableObjects)
+        {
+            obj.layer = defaultMask;
+        }
     }
 }
