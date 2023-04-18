@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hallucinationName: FloorSprites
-  hallucinationTier: 0
+  hallucinationTier: 2
   needsUpdate: 0
   hallucinationStarted:
     m_PersistentCalls:
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highChanceAdded: 5
   mediumChanceAdded: 3
-  lowChanceAdded: 100
+  lowChanceAdded: 1
   highEvents: []
   mediumEvents: []
   lowEvents: []
