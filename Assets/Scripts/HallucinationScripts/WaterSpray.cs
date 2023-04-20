@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SuperPupSystems.Helper;
 
-public class WaterSpray : MonoBehaviour
+public class WaterSpray : HallucinationEvent
 {
 
     public ParticleSystem waterSpray;
@@ -15,8 +15,10 @@ public class WaterSpray : MonoBehaviour
 
     private bool isWaterActive = false;
 
+
     public void OnTriggerEnter(Collider other)
     {
+        PerformHallucinationEvent();
         if(other.tag == "Player")
         {
             if(isWaterActive == false)
@@ -34,6 +36,7 @@ public class WaterSpray : MonoBehaviour
         float dist = Vector3.Distance(waterLocation.position, playerLocation.position);
         if (dist > maxDistance)
         {
+            FinishHallucinationEvent();
             waterSpray.gameObject.SetActive(false);
             isWaterActive = false;
         }
