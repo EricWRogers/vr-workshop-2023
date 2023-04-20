@@ -2253,6 +2253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vignetteGlobalVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 6238210358831678407, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
+      propertyPath: m_TagString
+      value: GlobalVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 6238210358831678409, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7797,6 +7801,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685922311}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &692720549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5364313916796787250, guid: 0e3581bba9aa5e343a3fe04c66b4c238, type: 3}
+  m_PrefabInstance: {fileID: 1957326502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &693469319
 GameObject:
   m_ObjectHideFlags: 0
@@ -18973,7 +18982,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -21563,6 +21572,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1008627978}
     m_Modifications:
+    - target: {fileID: 5364313916796787212, guid: 0e3581bba9aa5e343a3fe04c66b4c238, type: 3}
+      propertyPath: lowChanceAdded
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5364313916796787215, guid: 0e3581bba9aa5e343a3fe04c66b4c238, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -21613,7 +21626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5364313916796787250, guid: 0e3581bba9aa5e343a3fe04c66b4c238, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3581bba9aa5e343a3fe04c66b4c238, type: 3}
@@ -21622,6 +21635,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5364313916796787215, guid: 0e3581bba9aa5e343a3fe04c66b4c238, type: 3}
   m_PrefabInstance: {fileID: 1957326502}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1957326506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692720549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d305112e2ef5048aac4342b9ac36e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hallucinationName: 
+  hallucinationTier: 0
+  needsUpdate: 0
+  hallucinationStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  hallucinationEnded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1968012104
 GameObject:
   m_ObjectHideFlags: 0
