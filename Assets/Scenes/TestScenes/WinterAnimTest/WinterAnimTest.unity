@@ -552,6 +552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2353013541434324019, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
+      propertyPath: m_RenderMode
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4625173630936572466, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
       propertyPath: m_Name
       value: WaterSpray
@@ -562,11 +566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956794894918288028, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.632
+      value: 2.706
       objectReference: {fileID: 0}
     - target: {fileID: 4956794894918288028, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.264
+      value: 0.246
       objectReference: {fileID: 0}
     - target: {fileID: 4956794894918288028, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
       propertyPath: m_LocalPosition.z
