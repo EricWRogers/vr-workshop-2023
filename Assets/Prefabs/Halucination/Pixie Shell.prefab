@@ -90,7 +90,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.9282519e+31, y: 4.1754e-41, z: 9.78048e-39, w: -5.1578386e-10}
+  m_BoundingSphereOverride: {x: 0, y: 3.4e-44, z: 0, w: 3.4e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4948,7 +4948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7318435864301424509
 Transform:
   m_ObjectHideFlags: 0
@@ -9898,6 +9898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7318435864459610445}
   - component: {fileID: 7318435864459610444}
+  - component: {fileID: 1233663995163378470}
   m_Layer: 0
   m_Name: Pixie Shell
   m_TagString: Untagged
@@ -9912,7 +9913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7318435864459610418}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -278, y: 0, z: 611}
   m_LocalScale: {x: 0.74999994, y: 0.74999994, z: 0.74999994}
   m_ConstrainProportionsScale: 0
@@ -9935,3 +9936,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   offset: {x: 0, y: 3, z: 0}
+--- !u!114 &1233663995163378470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318435864459610418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1695deee24d9f4749aff864b8245682c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hallucinationName: Pixie
+  hallucinationTier: 1
+  needsUpdate: 0
+  globalVol: {fileID: 0}
+  hallucinationStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  hallucinationEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  pixie: {fileID: 7318435864301424480}

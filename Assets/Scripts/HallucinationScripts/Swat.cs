@@ -8,6 +8,7 @@ public class Swat : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<StartPixie>().FinishHallucinationEvent();
             Destroy(transform.parent.gameObject);
         }
     }
