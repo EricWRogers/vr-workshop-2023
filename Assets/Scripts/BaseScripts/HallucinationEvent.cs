@@ -61,17 +61,14 @@ public class HallucinationEvent : MonoBehaviour
 
             if(hallucinationTier == Tier.Low)
             {
-                Debug.Log("Low vignette");
                 globalVol.GetComponent<Animator>().Play("vignetteLowPulse", 0, 0);
             }
             else if(hallucinationTier == Tier.Medium)
             {
-                Debug.Log("medium vignette");
                 globalVol.GetComponent<Animator>().Play("vignetteMidPulse", 0, 0);
             }
             else if(hallucinationTier == Tier.High)
             {
-                Debug.Log("high vignette");
                 globalVol.GetComponent<Animator>().Play("vignetteHighPulse", 0, 0);
             }
             else

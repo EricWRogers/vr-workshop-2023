@@ -170,7 +170,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -664,9 +664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2301565700b424ebf9bde38fe3d388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4731060135498002279
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,9 +865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2301565700b424ebf9bde38fe3d388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &7194582019184780939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1110,6 +1104,7 @@ GameObject:
   - component: {fileID: 6164856264828333615}
   - component: {fileID: 6164856264828333614}
   - component: {fileID: 6164856264828333609}
+  - component: {fileID: 717875557957982341}
   m_Layer: 6
   m_Name: Cabinet
   m_TagString: Untagged
@@ -1221,6 +1216,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.43215483, y: 24, z: 18.000004}
   m_Center: {x: 5.783937, y: -1.0000039, z: 0.0000016127432}
+--- !u!65 &717875557957982341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579061588032716392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.000003, y: 0.34612563, z: 18.000004}
+  m_Center: {x: 1.7264406e-21, y: 10.826952, z: 0.0000016127432}
 --- !u!1 &7272890731865951603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1301,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
