@@ -100,8 +100,6 @@ public class HallucinationManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(HallucinationEvent.isActive);
-
         if (currentHallucination != null)
         {
             if (currentHallucination.needsUpdate)
