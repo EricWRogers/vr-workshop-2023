@@ -877,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363490442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.25, y: 0.98, z: 12.91}
+  m_LocalPosition: {x: 5.55, y: 1.22, z: 21.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1042,6 +1042,8 @@ MonoBehaviour:
   waterTimer: {fileID: 430457785}
   waterTimeActive: 5
   maxDistance: 5
+  boxDistance: 0
+  boxSize: 5
 --- !u!54 &430457787
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1079,7 +1081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430457784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5387843, y: 1.46, z: 20.96}
+  m_LocalPosition: {x: -2.5387843, y: 1.27, z: 20.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3339,7 +3341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 185368824126386842, guid: f2ea8b8959e24224f89df0fcfb429606, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.76
+      value: 12.63
       objectReference: {fileID: 0}
     - target: {fileID: 185368824126386842, guid: f2ea8b8959e24224f89df0fcfb429606, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5252,7 +5254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5431457043016824009, guid: 59dfdbb47a7edd74fbb1d30d2c1f8cec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2
+      value: 8.95
       objectReference: {fileID: 0}
     - target: {fileID: 5431457043016824009, guid: 59dfdbb47a7edd74fbb1d30d2c1f8cec, type: 3}
       propertyPath: m_LocalPosition.y
