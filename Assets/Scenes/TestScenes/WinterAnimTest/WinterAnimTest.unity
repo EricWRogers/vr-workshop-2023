@@ -556,6 +556,14 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2353013541434324019, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
+      propertyPath: m_RenderAlignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353013541434324019, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b916d851c2adb4a49b69308ab4578016, type: 2}
     - target: {fileID: 4625173630936572466, guid: af7cf714f26ccb842899672d6578d2be, type: 3}
       propertyPath: m_Name
       value: WaterSpray

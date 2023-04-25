@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4765739131773921832}
   - component: {fileID: 7440583799505229394}
   m_Layer: 0
-  m_Name: DustPuffWIP (2)
+  m_Name: DustPuff (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4824,7 +4824,7 @@ GameObject:
   - component: {fileID: 6844331864647385543}
   - component: {fileID: 2805817136817670293}
   m_Layer: 0
-  m_Name: DustPuffWIP (1)
+  m_Name: DustPuff (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9636,7 +9636,7 @@ GameObject:
   - component: {fileID: 3547323775240995246}
   - component: {fileID: 554520564538367930}
   m_Layer: 0
-  m_Name: DustPuffWIP
+  m_Name: DustPuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14451,7 +14451,7 @@ GameObject:
   - component: {fileID: 2882112000329687306}
   - component: {fileID: 6511611755701597615}
   m_Layer: 0
-  m_Name: DustPuffWIP
+  m_Name: DustPuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
