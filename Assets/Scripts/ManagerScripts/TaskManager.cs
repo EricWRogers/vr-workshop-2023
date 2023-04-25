@@ -86,6 +86,7 @@ public class TaskManager : MonoBehaviour
         if (temp.Count == 0)
         {
             Debug.LogError("Could not find matching task");
+            return;
         }
 
         temp[0].GetComponentInChildren<AnimateStrikethrough>().DoStrikeThrough();

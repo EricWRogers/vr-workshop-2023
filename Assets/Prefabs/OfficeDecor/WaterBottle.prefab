@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8077149316018524505}
   - component: {fileID: 8077149316018524486}
   - component: {fileID: 8077149316018524504}
-  m_Layer: 6
+  - component: {fileID: 6164856265689824904}
+  - component: {fileID: 6164856265689824907}
+  m_Layer: 15
   m_Name: WaterBottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +72,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 6
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -114,7 +116,19 @@ MonoBehaviour:
       m_Calls: []
   m_LastSelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6164856265689824907}
+        m_TargetAssemblyTypeName: BottleWater, Assembly-CSharp
+        m_MethodName: EnableCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -156,7 +170,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
-  m_MovementType: 0
+  m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -205,6 +219,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableObjects:
   - {fileID: 8282178388583264663}
+--- !u!136 &6164856265689824904
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077149316018524487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 29.57
+  m_Height: 79.2
+  m_Direction: 1
+  m_Center: {x: 0, y: 64.39034, z: 0}
+--- !u!114 &6164856265689824907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077149316018524487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993a40ccdac44c043b723e43f9677c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDrink:
+    m_PersistentCalls:
+      m_Calls: []
+  heldAmount: 1
+  refillAmount: 0.3
+  mainCollider: {fileID: 2836687969474505033}
 --- !u!1 &8282178388583264663
 GameObject:
   m_ObjectHideFlags: 0
