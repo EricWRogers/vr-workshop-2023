@@ -25,7 +25,6 @@ public class WaterSpray : HallucinationEvent
     
     public void Start()
     {
-        waterSpray.Stop();
         m_Collider = GetComponent<Collider>();
 
     }
@@ -43,13 +42,13 @@ public class WaterSpray : HallucinationEvent
             }
             
         }
-        if(m_hit.collider.name == null)
+        if(m_hit.collider != null)
         {
             if(m_hit.collider.name == "Player")
             {
                 if(isWaterActive == false)
                 {
-                    waterSpray.Play();
+                    waterSpray.gameObject.SetActive(true);
                     isWaterActive = true;
                     waterTimer.StartTimer(waterTimeActive, waterTimer.AutoRestart);
                 }
@@ -107,12 +106,14 @@ public class WaterSpray : HallucinationEvent
         float dist = Vector3.Distance(waterLocation.position, playerLocation.position);
         if (dist > maxDistance)
         {
-            FinishHallucinationEvent();
-            waterSpray.Stop();
+            Debug.Log("End");
+            waterSpray.gameObject.SetActive(false);
             isWaterActive = false;
+            FinishHallucinationEvent();
         }
         else
         {
+            Debug.Log("Restart");
             waterTimer.StartTimer();
         }
     }

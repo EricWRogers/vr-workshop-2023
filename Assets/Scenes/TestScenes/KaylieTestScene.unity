@@ -1029,7 +1029,7 @@ MonoBehaviour:
   hallucinationName: 
   hallucinationTier: 0
   needsUpdate: 0
-  globalVol: {fileID: 430457784}
+  globalVol: {fileID: 1172595630}
   hallucinationStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -2166,6 +2166,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f39598ca9a78fab4b9d212672d6c3df3, type: 3}
+--- !u!1 &1172595630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6238210358831678407, guid: 7fe61d01bd4bcc04f906300a2555ee98, type: 3}
+  m_PrefabInstance: {fileID: 1099161790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1172595633
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172595630}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 503c304949c3c6144937d4ecc9e35cff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1172967324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,7 +3134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1649921716014655295, guid: de3a913e33ea7ac488127a9ee339b5d7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de3a913e33ea7ac488127a9ee339b5d7, type: 3}
