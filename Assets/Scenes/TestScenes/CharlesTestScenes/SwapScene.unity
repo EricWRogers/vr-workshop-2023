@@ -860,7 +860,7 @@ MonoBehaviour:
   energyLeft: 0.8
   hydrationLeft: 0.9
   waterLossRate: 0
-  energyLossRate: 0
+  energyLossRate: 0.01
   energyBar: {fileID: 1749169909}
   waterBar: {fileID: 1991686276}
 --- !u!1 &1029718160
@@ -1477,7 +1477,19 @@ MonoBehaviour:
   m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1749169909}
+        m_TargetAssemblyTypeName: EnergyBar, Assembly-CSharp
+        m_MethodName: SetEnergy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1749169909
 MonoBehaviour:
   m_ObjectHideFlags: 0
