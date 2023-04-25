@@ -22,10 +22,13 @@ TagManager:
   - WaterDrop
   - PlayerMouth
   - screen
+  - TV
+  - PortUSB
   - LunchBox
   - ApproveStamp
   - DenyStamp
   - Delivery
+  - GlobalVolume
   layers:
   - Default
   - TransparentFX
@@ -43,6 +46,9 @@ TagManager:
   - Key
   - IgnoreKey
   - GrabInteractPlayer
+  - 
+  - 
+  - 
   - 
   - 
   - 
