@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PostVignette : MonoBehaviour
 {
-    public void GetVignetteTurnOff()
+    public void VignetteTurnOff()
     {
-        // real jank way of getting the turn off function to the animation event
-        FindObjectOfType<HallucinationEvent>().GetComponent<HallucinationEvent>().VignetteTurnOff();
+        GameObject.FindGameObjectWithTag("GlobalVolume").GetComponent<Animator>().Play("vignetteNone", 0, 0);
     }
 }
