@@ -1028,7 +1028,6 @@ MonoBehaviour:
   hallucinationName: 
   hallucinationTier: 0
   needsUpdate: 0
-  globalVol: {fileID: 1172595630}
   hallucinationStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -2389,10 +2388,42 @@ PrefabInstance:
       propertyPath: hand
       value: 
       objectReference: {fileID: 867462865}
+    - target: {fileID: 2986332138163509425, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986332138163509425, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986332138422022262, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986332138422022262, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986332138422022262, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3084475960113793164, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: hand
       value: 
       objectReference: {fileID: 95253219}
+    - target: {fileID: 8091753119410910315, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091753119410910315, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091753119410910315, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8650424662829020746, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 608
@@ -2472,6 +2503,14 @@ PrefabInstance:
     - target: {fileID: 8650424663811897528, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_Name
       value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862055963263366583, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862055963263366583, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
@@ -3166,7 +3205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1649921716014655295, guid: de3a913e33ea7ac488127a9ee339b5d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de3a913e33ea7ac488127a9ee339b5d7, type: 3}

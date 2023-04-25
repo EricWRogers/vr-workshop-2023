@@ -25,50 +25,33 @@ public class WaterSpray : HallucinationEvent
     
     public void Start()
     {
+        waterSpray.Stop();
         m_Collider = GetComponent<Collider>();
 
     }
 
-    public void Update()
-    {   
+
+    public override void PerformHallucinationEvent()
+    {
+        base.PerformHallucinationEvent();
         RaycastHit[] hits = Physics.BoxCastAll(m_Collider.bounds.center, transform.localScale * boxSize, transform.forward, transform.rotation);
         //public static RaycastHit[] BoxCastAll(Vector3 center, Vector3 halfExtents, Vector3 direction, Quaternion orientation);
         for(int i = 0; i < hits.Length; i++)
         {
             if(hits[i].collider.name == "Player")
             {
-                m_hit = hits[i];
-                Debug.Log("Hit: " + m_hit.collider.name);
-            }
-            
-        }
-        if(m_hit.collider != null)
-        {
-            if(m_hit.collider.name == "Player")
-            {
                 if(isWaterActive == false)
                 {
-                    waterSpray.gameObject.SetActive(true);
+                    Debug.Log("Play");
+                    waterSpray.Play();
                     isWaterActive = true;
                     waterTimer.StartTimer(waterTimeActive, waterTimer.AutoRestart);
                 }
             }
-        }
-        
-        
-        //m_hitDetect = Physics.BoxCastAll(m_Collider.bounds.center, transform.localScale * boxSize, transform.forward, transform.rotation);
+            
+        }        
     }
 
-   /* public override void PerformHallucinationEvent()
-    {
-        base.PerformHallucinationEvent();
-        m_hitDetect = Physics.BoxCast(m_Collider.bounds.center, transform.localScale * boxSize, transform.forward, out m_hit, transform.rotation, boxDistance);
-        if(m_hitDetect)
-        {
-            Debug.Log("Hit: " + m_hit.collider.name);
-        }
-    }
-*/
     /*public void OnTriggerEnter(Collider other)
     {
         PerformHallucinationEvent();
@@ -107,7 +90,7 @@ public class WaterSpray : HallucinationEvent
         if (dist > maxDistance)
         {
             Debug.Log("End");
-            waterSpray.gameObject.SetActive(false);
+            waterSpray.Stop();
             isWaterActive = false;
             FinishHallucinationEvent();
         }
