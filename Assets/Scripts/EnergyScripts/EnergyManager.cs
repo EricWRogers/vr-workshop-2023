@@ -31,6 +31,10 @@ public class EnergyManager : MonoBehaviour
 
     void Start()
     {
+        //coffeeCup = FindObjectOfType<CoffeeCup>();
+        //coffeeCup.onDrink.AddListener(AddPoints);
+        //bottleWater = FindObjectOfType<BottleWater>();
+        //bottleWater.onDrink.AddListener(AddHydration);
         if (FindObjectOfType<BottleWater>() != null)
         {
             bottleWater = FindObjectOfType<BottleWater>(); 
@@ -46,7 +50,10 @@ public class EnergyManager : MonoBehaviour
 
     public void AddPoints(float amount)
     {
+
+        //Debug.Log("AddPoints is Working : " + energyLeft + " " + amount);
         energyLeft += amount;
+        //Debug.Log("AddPoints is Working : " + energyLeft);
         energyLeft = Mathf.Clamp(energyLeft, minValue, maxValue);
         energyBar.slider.value = energyLeft;
     }
@@ -71,6 +78,7 @@ public class EnergyManager : MonoBehaviour
 
     public void TimeDown()
     {
+        //Debug.Log("has water : " + hasWater);
         if(hasWater)
         {
            AddHydration(waterLossRate);
