@@ -10,6 +10,7 @@ public class coffeeEvent : UnityEvent<float> {}
 public class CoffeeCup : MonoBehaviour
 {
     public float energyRestored = .3f;
+    public float amountFromMaker = .2f;
     public float coffeeDrinkTime;
     public float CoffeeAmount = 0f;
     public bool FillingCoffee = false;
@@ -33,22 +34,27 @@ public class CoffeeCup : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("CoffeeMaker"))
-        {
-            if(CoffeeAmount == 1.0f)
-            {
-                Debug.Log("Cup is full");
-            }
-            else 
-            {
-                CoffeeAmount /*+*/= /*Time.deltaTime * coffeeDrinkTime*/1.0f;
-                CupIsEmpty = false;
-                Debug.Log("Refilling Coffee");
-                Coffee.SetActive(true);
-            }
+        //if (collision.CompareTag("CoffeeMaker"))
+        //{
+        //    if(CoffeeAmount == 1.0f)
+        //    {
+        //        Debug.Log("Cup is full");
+        //    }
+        //    else 
+        //    {
+        //        CoffeeAmount /*+*/= /*Time.deltaTime * coffeeDrinkTime*/1.0f;
+        //        CupIsEmpty = false;
+        //        Debug.Log("Refilling Coffee");
+        //        Coffee.SetActive(true);
+        //    }
            
             
 
+        //}
+
+        if (collision.CompareTag("CoffeeMakerDrip"))
+        {
+            CoffeeAmount += amountFromMaker;
         }
         
         if (collision.CompareTag("PlayerMouth"))
