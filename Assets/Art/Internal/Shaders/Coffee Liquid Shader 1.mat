@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Coffee Liquid Shader
+  m_Name: Coffee Liquid Shader 1
   m_Shader: {fileID: -6465566751694194690, guid: 04119aafc07e8874d9c10486d19804e4, type: 3}
   m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
@@ -66,6 +66,6 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _SideColor: {r: 0.7924528, g: 0.43538046, b: 0.06279809, a: 1}
-    - _TopColor: {r: 0.79215693, g: 0.43529415, b: 0.0627451, a: 1}
+    - _SideColor: {r: 0.8679245, g: 0.4141155, b: 0, a: 1}
+    - _TopColor: {r: 0.86666673, g: 0.4156863, b: 0, a: 1}
   m_BuildTextureStacks: []
