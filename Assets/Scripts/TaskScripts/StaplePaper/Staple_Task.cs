@@ -16,6 +16,7 @@ public class Staple_Task : Task
         if (currentAmount >= requiredAmount)
         {
             CompleteTask(this);
+            Debug.Log("Play effect");
             SpawnFX(stapler.transform.position);
         }
     }
