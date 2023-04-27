@@ -1,31 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SuperPupSystems.Helper;
 
 public class USBscript : MonoBehaviour
 {
-    public GameObject tvScreen;
-
-    public Material[] slides;
-
-    public void slideshow()
-    {
-        /*
-        for (Material material in slides)
-        {
-            tvScreen.GetComponent(Material);
-        }
-        */
-    }
-
-    private void OnCollisionEnter(Collision tvScreen)
-    {
-        
-        
-
-    }
-
-    /*
+    public Animator animator;
+    public string SlideShowAnim = "SlideShowAnim";
+    public Rigidbody UsbRigidBody;
+    Vector3 usbPos = new Vector3(0.0f, -0.25f, 0.0f);
     // Start is called before the first frame update
     void Start()
     {
@@ -37,27 +20,19 @@ public class USBscript : MonoBehaviour
     {
         
     }
-    */
-}
-/*
-
-var change : boolean = true;
-
-function Start()
-{
-    changeTexture();
-}
-
-
-function changeTexture()
-{
-
-    while (change)
+    private void OnTriggerEnter(Collider other)
     {
-        yield WaitForSeconds(0.5);
-renderer.material.mainTexture = texture1;
-yield WaitForSeconds(0.5);
-renderer.material.mainTexture = texture2;
+        
+
+        if (other.CompareTag("TV"))
+        {
+            //gameObject.transform.Translate(usbPos);
+            other.GetComponentInChildren<Canvas>().gameObject.SetActive(true);         
+            animator.Play(SlideShowAnim,0,0.5f);
+
+            UsbRigidBody.constraints = RigidbodyConstraints.FreezePosition;
+
+        }
+        
     }
 }
-*/
