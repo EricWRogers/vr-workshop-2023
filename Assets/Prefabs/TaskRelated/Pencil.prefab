@@ -100,7 +100,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.3994
+  m_Radius: 2
   m_Height: 72.31556
   m_Direction: 1
   m_Center: {x: 0.00000047683716, y: -2.645996, z: 0}
@@ -189,7 +189,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 6
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
