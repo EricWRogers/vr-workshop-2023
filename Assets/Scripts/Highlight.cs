@@ -16,18 +16,15 @@ public class Highlight : MonoBehaviour
         }
 
         highlightMask = LayerMask.NameToLayer("Highlight");
+        defaultMask = interactableObjects[0].layer;
     }
 
     public void HighlightObject()
     {
-        for (int i = 0; i < interactableObjects.Count; i++)
+        foreach (GameObject obj in interactableObjects)
         {
-            if (i == 0)
-            {
-                defaultMask = interactableObjects[i].layer;
-            }
-
-            interactableObjects[i].layer = highlightMask;
+            if (obj != null)
+                obj.layer = highlightMask;
         }    
     }
 
@@ -35,7 +32,8 @@ public class Highlight : MonoBehaviour
     {
         foreach (GameObject obj in interactableObjects)
         {
-            obj.layer = defaultMask;
+            if (obj != null)
+                obj.layer = defaultMask;
         }
     }
 }

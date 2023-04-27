@@ -24,6 +24,11 @@ public class HallucinationEvent : MonoBehaviour
     public UnityEvent hallucinationEnded = new UnityEvent();
     private bool hasStarted = false;
 
+    private void Start()
+    {
+        globalVol = GameObject.FindGameObjectWithTag("GlobalVolume");
+    }
+
     public void StartHallucinationEvent()
     {
         hallucinationStarted.Invoke();
@@ -46,8 +51,6 @@ public class HallucinationEvent : MonoBehaviour
 
     private void VignetteTurnOn()
     {
-        globalVol= GameObject.Find("vignetteGlobalVolume");
-
         if (!globalVol)
         {
             Debug.LogError("Missing asset in scene, location: Assets/Prefabs/PostProcessing/vignetteGlobalVolume");
@@ -74,14 +77,5 @@ public class HallucinationEvent : MonoBehaviour
                 Debug.LogError("Something is wrong with Tier Enum");
             }
         }
-    }
-
-    public void VignetteTurnOff()
-    {
-        globalVol = GameObject.Find("vignetteGlobalVolume");
-        if(!globalVol)
-            Debug.LogError("Missing asset in scene, location: Assets/Prefabs/PostProcessing/vignetteGlobalVolume");
-        else
-            globalVol.GetComponent<Animator>().Play("vignetteNone", 0, 0);
     }
 }
