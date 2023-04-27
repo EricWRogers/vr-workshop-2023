@@ -7,7 +7,7 @@ public class PaperShredder : MonoBehaviour
     public Vector3 shredParticleLocation;
     public Quaternion shredParticleRotation;
     [HideInInspector]
-
+    AudioManagerX AMX;
     private ShredPaperTask task;
 
     void Start()
@@ -22,6 +22,7 @@ public class PaperShredder : MonoBehaviour
             task.UpdateTask();
             //StartCoroutine(shredPaperParticle());
             Destroy(other.gameObject);
+            AMX.play("Shredder");
         }
     }
 

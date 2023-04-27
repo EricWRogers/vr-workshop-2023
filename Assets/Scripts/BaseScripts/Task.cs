@@ -29,14 +29,19 @@ public class Task : MonoBehaviour
     public int currentAmount = 0;
     [HideInInspector]
     public string currentText;
+    AudioManagerX AMX;
 
-
+    private void Start()
+    {
+        AMX = AudioManagerX.Instance;
+    }
     /// <summary>
     /// Call this function when the criteria for completing the given task is met.
     /// </summary>
     /// <param name="task">Pass in the Task that calls this function.</param>
     public virtual void CompleteTask(Task task)
     {
+        AMX.play("Complete Sound");
         onComplete.Invoke(task);
         //task ui will listen for when an event is completed and update the ui accordingly with the given task
         //Instantiate(completeParticles, FindObjectOfType<XROrigin>().transform.position, Quaternion.identity);

@@ -19,8 +19,11 @@ public class MouseController : MonoBehaviour
     private GameObject originalHit;
     private bool isGrabbing = false;
 
+    AudioManagerX AMX;
+
     private void Start()
     {
+        AMX = AudioManagerX.Instance;
         rb = GetComponent<Rigidbody>();
         cursor = FindObjectOfType<CursorController>();
     }
@@ -32,6 +35,7 @@ public class MouseController : MonoBehaviour
 
     public void OnClick(InputAction.CallbackContext context)
     {
+        AMX.play("Mouse Click");
         if (context.performed)
         {
             hit = Physics2D.Raycast(cursor.clickPoint.transform.position, Vector3.forward);

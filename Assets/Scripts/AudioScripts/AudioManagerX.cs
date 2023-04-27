@@ -49,6 +49,7 @@ public class AudioManagerX : MonoBehaviour
             return;
         }
         s.source.Play();
+        Debug.Log(name + " Played");
     }
 
     public void stop(String name)
@@ -86,5 +87,13 @@ public class AudioManagerX : MonoBehaviour
     void Start()
     {
         play("BGM");
+    }
+
+    public void Ambiance()
+    {
+        int rand = UnityEngine.Random.Range(0, 12);
+
+        sounds[rand].source.Play();
+        Debug.Log("Ambiance: " + sounds[rand].name);
     }
 }

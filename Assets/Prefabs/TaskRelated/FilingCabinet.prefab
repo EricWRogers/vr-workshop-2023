@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 961382027093330985}
   - component: {fileID: 5169762973568946825}
   - component: {fileID: 2122160415760833700}
+  - component: {fileID: 2730537627445652422}
   m_Layer: 12
   m_Name: BottomDrawer
   m_TagString: Untagged
@@ -705,6 +706,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableObjects:
   - {fileID: 876227121216525532}
+--- !u!114 &2730537627445652422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2849439891318308212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec178bd33072d93408b4dd38a243c94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3479574755031560599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +1914,7 @@ GameObject:
   - component: {fileID: 5544010389974076264}
   - component: {fileID: 6867269262210510094}
   - component: {fileID: 1069971956280380305}
+  - component: {fileID: 7539934136993064509}
   m_Layer: 12
   m_Name: Top
   m_TagString: Untagged
@@ -2205,6 +2219,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.096125, y: 0.5761028, z: 1.3226845}
   m_Center: {x: -0.005864337, y: 5.31, z: 9.87685}
+--- !u!114 &7539934136993064509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272890731865951603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec178bd33072d93408b4dd38a243c94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7777804384927597430
 GameObject:
   m_ObjectHideFlags: 0

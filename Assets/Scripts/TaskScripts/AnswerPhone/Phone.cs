@@ -22,8 +22,11 @@ public class Phone : MonoBehaviour
     private bool updated = false;
     private bool finished = false;
 
+    AudioManagerX AMX;
+
     private void Start()
     {
+        AMX = AudioManagerX.Instance;
         aSrc = GetComponent<AudioSource>();
         task = FindObjectOfType<AnswerPhoneTask>();
         // DayManager.Instance.GetComponent<Timer>().TimeOut.AddListener(InvokeCall);
@@ -37,7 +40,7 @@ public class Phone : MonoBehaviour
             mainCollider.enabled = false;
             isTalking = true;
             CancelInvoke("Call");
-            aSrc.Stop();
+            AMX.stop("Phone");
             ringCounter = 0;
 
             currentTalkTime += Time.deltaTime;
@@ -45,6 +48,7 @@ public class Phone : MonoBehaviour
             if (currentTalkTime >= timeToComplete)
             {
                 task.UpdateTask();
+                AMX.play("Complete Sound");
                 if (task.currentAmount >= task.requiredAmount)
                 {
                     task.CompleteTask(task);
@@ -77,14 +81,14 @@ public class Phone : MonoBehaviour
     {
         if (ringCounter < amountOfRings)
         {
-            aSrc.Play();
+            AMX.play("Phone");
             ringCounter++;
             isRinging = true;
         }
         else
         {
             CancelInvoke("Call");
-            aSrc.Stop();
+            AMX.stop("Phone");
             isRinging = false;
             ringCounter = 0;
         }

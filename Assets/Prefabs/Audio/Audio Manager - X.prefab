@@ -969,3 +969,14 @@ MonoBehaviour:
     playOnAwake: 1
     output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
     reverbPreset: 0
+  - name: Complete Sound
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 38a9f4a6d48960542afdeb33c7fbda4e, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -8522336940887058092, guid: 3f3947e58367e1a4dad481d8795c7636, type: 2}
+    reverbPreset: 0

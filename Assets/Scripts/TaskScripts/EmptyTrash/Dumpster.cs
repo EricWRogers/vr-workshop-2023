@@ -4,9 +4,10 @@ using UnityEngine.Events;
 public class Dumpster : MonoBehaviour
 {
     private Trash_Task task;
-
+    AudioManagerX AMX;
     private void Start()
     {
+        AMX = AudioManagerX.Instance;
         task = FindObjectOfType<Trash_Task>();
     }
 
@@ -14,6 +15,7 @@ public class Dumpster : MonoBehaviour
     {
         if (other.CompareTag("Trash"))
         {
+            AMX.play("Trash Can Toss");
             task.UpdateTask();
             Destroy(other.gameObject);
 
