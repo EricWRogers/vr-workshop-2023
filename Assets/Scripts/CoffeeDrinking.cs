@@ -23,6 +23,9 @@ public class CoffeeDrinking : MonoBehaviour
 
     //public bool hasCoffee { get { return material.GetFloat("_Fill") > 0.0f; } }
     public bool isPouring;
+    public float fillLevel = 1.0f;
+    public float min = 0.475f;
+    public float max = 0.525f;
 
     public void Start()
     {
@@ -39,14 +42,14 @@ public class CoffeeDrinking : MonoBehaviour
 
         if(isPouring)
         {
-            float targetValue = Mathf.Clamp(
-                material.GetFloat("_Fill") - (decreaseSize * Time.deltaTime),
+            fillLevel = Mathf.Clamp(
+                fillLevel - (decreaseSize * Time.deltaTime),
                 0.0f,
                 1.0f
             );
             
-            material.SetFloat("_Fill", targetValue);
-            emission.enabled = targetValue > 0.0f;
+            material.SetFloat("_Fill", (fillLevel * (max - min)) + min);
+            emission.enabled = fillLevel > 0.0f;
         }
         else 
         {

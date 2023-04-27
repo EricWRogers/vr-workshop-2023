@@ -4898,6 +4898,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   isPouring: 0
+  fillLevel: 1
+  min: 0.465
+  max: 0.525
 --- !u!1 &1896101932859409303
 GameObject:
   m_ObjectHideFlags: 0
