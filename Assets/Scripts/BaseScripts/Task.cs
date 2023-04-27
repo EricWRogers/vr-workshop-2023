@@ -30,6 +30,9 @@ public class Task : MonoBehaviour
     [HideInInspector]
     public string currentText;
 
+    private bool completed = false;
+    private bool playedEffects = false;
+
 
     /// <summary>
     /// Call this function when the criteria for completing the given task is met.
@@ -37,7 +40,11 @@ public class Task : MonoBehaviour
     /// <param name="task">Pass in the Task that calls this function.</param>
     public virtual void CompleteTask(Task task)
     {
+        if (completed)
+            return;
+        
         onComplete.Invoke(task);
+        completed = true;
         //task ui will listen for when an event is completed and update the ui accordingly with the given task
         //Instantiate(completeParticles, FindObjectOfType<XROrigin>().transform.position, Quaternion.identity);
         FindObjectOfType<TaskManager>().tasks.Remove(task);
@@ -64,11 +71,20 @@ public class Task : MonoBehaviour
 
     public virtual void SpawnFX(Vector3 position, Quaternion rotation)
     {
+        if (playedEffects)
+            return;
+        
+        playedEffects = true;
         Instantiate(completeParticles, position, rotation);
     }
 
     public virtual void SpawnFX(Vector3 position)
     {
+        if (playedEffects)
+            return;
+        
+        playedEffects = true;
+        
         Instantiate(completeParticles, position, Quaternion.identity);
     }
 }
