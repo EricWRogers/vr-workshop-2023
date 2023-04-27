@@ -5,9 +5,6 @@ using UnityEngine.Events;
 
 public class Drawer : MonoBehaviour
 {
-    [HideInInspector]
-    public UnityEvent filedEvent = new UnityEvent();
-
     private SortFile task;
 
     private void Start()
@@ -18,7 +15,11 @@ public class Drawer : MonoBehaviour
     public void FilePaper()
     {
         task.UpdateTask();
-        filedEvent.Invoke();
+        if (task.currentAmount >= task.requiredAmount)
+        {
+            task.CompleteTask(task);
+            task.SpawnFX(transform.position);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

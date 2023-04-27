@@ -19,7 +19,7 @@ public class PhysicsButton : MonoBehaviour
         joint = GetComponent<ConfigurableJoint>();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (!isPressed && GetValue() + threshold >= 1)
         {

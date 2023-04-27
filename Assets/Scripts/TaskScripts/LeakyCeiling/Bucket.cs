@@ -28,11 +28,12 @@ public class Bucket : MonoBehaviour
 
         }
 
-        if(material.GetFloat("_Fill") >= 1f)
+        if(material.GetFloat("_Fill") >= .65f)
         {
             //task complete
             task.UpdateTask();
             task.CompleteTask(task);
+            task.SpawnFX(transform.position);
             Destroy(GameObject.FindGameObjectWithTag("WaterDrop"));
         }
             

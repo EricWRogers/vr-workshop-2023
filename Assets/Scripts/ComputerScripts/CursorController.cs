@@ -18,15 +18,16 @@ public class CursorController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(mouse.GetPhysicalDirection() * speed * Time.deltaTime);
+        rb.velocity = Vector3.zero;
+        rb.AddForce(mouse.GetPhysicalDirection() * speed, ForceMode2D.Force);
         if (mouse.GetPhysicalDirection() == Vector2.zero)
         {
             rb.velocity = Vector2.zero;
         }
 
-        if (rb.velocity.magnitude > 5)
+        if (rb.velocity.magnitude > mouse.maxSpeed)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed * Time.deltaTime;
+            rb.velocity = rb.velocity.normalized * maxSpeed;
         }
     }
 }

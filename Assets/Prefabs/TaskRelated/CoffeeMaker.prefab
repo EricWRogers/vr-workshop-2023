@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 651864497728374710}
   m_Layer: 0
   m_Name: CoffeeMaker
-  m_TagString: Player
+  m_TagString: CoffeeMaker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

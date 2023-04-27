@@ -5,19 +5,5 @@ using UnityEngine.Events;
 
 public class SortFile : Task
 {
-    private Drawer drawer;
 
-    private void Start()
-    {
-        drawer = FindObjectOfType<Drawer>();
-        drawer.filedEvent.AddListener(ManageTask);
-    }
-
-    private void ManageTask()
-    {
-        if (currentAmount >= requiredAmount)
-        {
-            CompleteTask(this);
-        }
-    }
 }
