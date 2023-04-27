@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1649921716014655292}
   - component: {fileID: 1649921716014655234}
   - component: {fileID: 1649921716014655293}
+  - component: {fileID: 6473306846645361403}
   m_Layer: 0
   m_Name: HallucinationFloor
   m_TagString: Untagged
@@ -222,8 +223,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.500623, g: 0.7458757, b: 0.8490566, a: 1}
-      maxColor: {r: 0.8773585, g: 0.2027857, b: 0.7157938, a: 1}
+      minColor: {r: 0.38823533, g: 0.7372549, b: 0.6666667, a: 1}
+      maxColor: {r: 0.91372555, g: 0.20392159, b: 0.41960788, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1305,8 +1306,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.15686275, g: 0.8000001, b: 0.32156864, a: 0.84313726}
-        key1: {r: 0.8773585, g: 0.70013076, b: 0.1779548, a: 0.32941177}
+        key0: {r: 0.93725497, g: 0.53333336, b: 0.2627451, a: 0.84313726}
+        key1: {r: 0.7568628, g: 0.77647066, b: 0.27450982, a: 0.32941177}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1334,17 +1335,17 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
-        key0: {r: 0.7217876, g: 0.17942323, b: 0.8490566, a: 0.7764706}
-        key1: {r: 0.17285508, g: 0.7830189, b: 0.7659528, a: 0.5176471}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0.38823533, g: 0.7372549, b: 0.6666667, a: 0.7764706}
+        key1: {r: 0.6509804, g: 0.2392157, b: 0.47058827, a: 0.5176471}
+        key2: {r: 0.91372555, g: 0.20392162, b: 0.41960788, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 8096
-        ctime1: 57632
-        ctime2: 0
+        ctime0: 1735
+        ctime1: 65342
+        ctime2: 61102
         ctime3: 0
         ctime4: 0
         ctime5: 0
@@ -4812,3 +4813,25 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 2
+--- !u!114 &6473306846645361403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649921716014655295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771643b52d6bd6f46a3cddf46951bd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hallucinationName: 
+  hallucinationTier: 0
+  needsUpdate: 0
+  hallucinationStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  hallucinationEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  floor: {fileID: 1649921716014655234}
