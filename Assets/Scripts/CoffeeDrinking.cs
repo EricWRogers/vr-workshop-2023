@@ -34,20 +34,23 @@ public class CoffeeDrinking : MonoBehaviour
         Vector3.Lerp(bottomPoint.transform.position, topPoint.transform.position, material.GetFloat("_Fill"));
         
         var emission = particleSystem.emission;
-        emission.enabled = SpillChecker();
         isPouring = SpillChecker();
+        emission.enabled = isPouring;
 
         if(isPouring)
         {
-            //var emission = particleSystem.emission;
-            //emission.enabled = SpillChecker();
-
-            float targetValue = material.GetFloat("_Fill") - decreaseSize;
-
-            if(targetValue < material.GetFloat("_Fill"))
-            {
-                material.SetFloat("_Fill", material.GetFloat("_Fill") - decreaseSize);
-            }
+            float targetValue = Mathf.Clamp(
+                material.GetFloat("_Fill") - (decreaseSize * Time.deltaTime),
+                0.0f,
+                1.0f
+            );
+            
+            material.SetFloat("_Fill", targetValue);
+            emission.enabled = targetValue > 0.0f;
+        }
+        else 
+        {
+            emission.enabled = false;
         }
     }
 

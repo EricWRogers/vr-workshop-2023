@@ -12,6 +12,7 @@ public class BottleWater : MonoBehaviour
     public waterBottleEvent onDrink = new waterBottleEvent();
     public float heldAmount = 1f;
     public float refillAmount;
+    public float waterLossRate = 0.1f;
     public Collider mainCollider;
 
     public void EnableCollider()
@@ -29,7 +30,7 @@ public class BottleWater : MonoBehaviour
         if (other.CompareTag("PlayerMouth") && heldAmount > 0)
         {
             onDrink.Invoke(refillAmount);
-            heldAmount -= refillAmount;
+            heldAmount -= waterLossRate;
             Debug.Log("Drunk some water");
         }
     }
