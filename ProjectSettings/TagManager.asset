@@ -22,6 +22,7 @@ TagManager:
   - WaterDrop
   - PlayerMouth
   - screen
+  - CoffeeDrip
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - Highlight
   - StapledPaper
   - PostProcessing
-  - 
+  - CoffeeCupWall
   - 
   - 
   - 
