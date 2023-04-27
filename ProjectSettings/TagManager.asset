@@ -29,6 +29,7 @@ TagManager:
   - DenyStamp
   - Delivery
   - GlobalVolume
+  - CoffeeDrip
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,12 @@ TagManager:
   - GrabInteractPlayer
   - Door
   - Hands
+  - CoffeeCupWall
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
