@@ -43,6 +43,7 @@ public class PhysicsButton : MonoBehaviour
 
     protected virtual void Pressed()
     {
+        Debug.Log("press");
         isPressed = true;
         onPressed.Invoke();
     }

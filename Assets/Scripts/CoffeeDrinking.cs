@@ -23,6 +23,9 @@ public class CoffeeDrinking : MonoBehaviour
 
     //public bool hasCoffee { get { return material.GetFloat("_Fill") > 0.0f; } }
     public bool isPouring;
+    public float fillLevel = 1.0f;
+    public float min = 0.475f;
+    public float max = 0.525f;
 
     public void Start()
     {
@@ -34,20 +37,23 @@ public class CoffeeDrinking : MonoBehaviour
         Vector3.Lerp(bottomPoint.transform.position, topPoint.transform.position, material.GetFloat("_Fill"));
         
         var emission = particleSystem.emission;
-        emission.enabled = SpillChecker();
         isPouring = SpillChecker();
+        emission.enabled = isPouring;
 
         if(isPouring)
         {
-            //var emission = particleSystem.emission;
-            //emission.enabled = SpillChecker();
-
-            float targetValue = material.GetFloat("_Fill") - decreaseSize;
-
-            if(targetValue < material.GetFloat("_Fill"))
-            {
-                material.SetFloat("_Fill", material.GetFloat("_Fill") - decreaseSize);
-            }
+            fillLevel = Mathf.Clamp(
+                fillLevel - (decreaseSize * Time.deltaTime),
+                0.0f,
+                1.0f
+            );
+            
+            material.SetFloat("_Fill", (fillLevel * (max - min)) + min);
+            emission.enabled = fillLevel > 0.0f;
+        }
+        else 
+        {
+            emission.enabled = false;
         }
     }
 
