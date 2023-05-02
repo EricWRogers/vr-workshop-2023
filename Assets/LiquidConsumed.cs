@@ -8,11 +8,8 @@ public class LiquidConsumed : MonoBehaviour
     
     public void OnParticleCollision(GameObject other)
     {
-        Debug.Log("Particle HIT");
-        
-        if(other.gameObject.CompareTag("CoffeeDrip"))
+        if (other.gameObject.CompareTag("CoffeeDrip"))
         {
-            Debug.Log("Compare Tag hit");
             EnergyManager.instance.AddPoints(energyReFill);
         }
             

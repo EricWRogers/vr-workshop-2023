@@ -31,6 +31,7 @@ TagManager:
   - GlobalVolume
   - CoffeeDrip
   - CoffeeCup
+  - CoffeeMakerDrip
   layers:
   - Default
   - TransparentFX

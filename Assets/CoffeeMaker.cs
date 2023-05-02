@@ -7,6 +7,10 @@ public class CoffeeMaker : MonoBehaviour
     public ParticleSystem drip;
 
 
+    private void Start()
+    {
+        drip.Stop();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("CoffeeCup"))
@@ -17,7 +21,7 @@ public class CoffeeMaker : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("CoffeCup"))
+        if (other.CompareTag("CoffeeCup"))
         {
             drip.Stop();
         }
