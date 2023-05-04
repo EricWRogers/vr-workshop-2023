@@ -30,6 +30,8 @@ TagManager:
   - Delivery
   - GlobalVolume
   - CoffeeDrip
+  - CoffeeCup
+  - CoffeeMakerDrip
   layers:
   - Default
   - TransparentFX
@@ -50,12 +52,6 @@ TagManager:
   - Door
   - Hands
   - CoffeeCupWall
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

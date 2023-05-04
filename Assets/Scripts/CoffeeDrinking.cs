@@ -40,7 +40,9 @@ public class CoffeeDrinking : MonoBehaviour
         isPouring = SpillChecker();
         emission.enabled = isPouring;
 
-        if(isPouring)
+        material.SetFloat("_Fill", (fillLevel * (max - min)) + min);
+
+        if (isPouring)
         {
             fillLevel = Mathf.Clamp(
                 fillLevel - (decreaseSize * Time.deltaTime),
@@ -68,42 +70,42 @@ public class CoffeeDrinking : MonoBehaviour
 
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(0.0f,0.0f,1.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(1.0f,0.0f,1.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(1.0f,0.0f,0.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(0.0f,0.0f,-1.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(1.0f,0.0f,-1.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(-1.0f,0.0f,-1.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(-1.0f,0.0f,0.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             if(!Physics.Raycast(origin.transform.position, Vector3.Normalize(new Vector3(-1.0f,0.0f,1.0f)), out hit, maxDistance, layerToCheck))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 return true;
             }
             return false;

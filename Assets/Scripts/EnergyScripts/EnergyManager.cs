@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class EnergyManager : MonoBehaviour
 {
     public static EnergyManager instance;
-    private CoffeeCup coffeeCup;
+    private CoffeeDrinking coffeeCup;
     private BottleWater bottleWater;
     public UnityEvent gameOver;
 
@@ -41,10 +41,9 @@ public class EnergyManager : MonoBehaviour
             bottleWater.onDrink.AddListener(AddHydration);
         }
 
-        if (FindObjectOfType<CoffeeCup>() != null)
+        if (FindObjectOfType<CoffeeDrinking>() != null)
         {
-            coffeeCup = FindObjectOfType<CoffeeCup>();
-            coffeeCup.onDrink.AddListener(AddPoints);
+            coffeeCup = FindObjectOfType<CoffeeDrinking>();
         }
     }
 

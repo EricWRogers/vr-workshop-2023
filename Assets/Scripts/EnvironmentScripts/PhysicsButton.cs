@@ -8,6 +8,8 @@ public class PhysicsButton : MonoBehaviour
 
     public float threshold = .1f;
     public float deadZone = .025f;
+    public float heightMax = 1f;
+    public float heightMin = 1f;
 
     protected bool isPressed = false;
     Vector3 startPos;
@@ -21,6 +23,8 @@ public class PhysicsButton : MonoBehaviour
 
     protected virtual void Update()
     {
+        transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Clamp(transform.localPosition.y, heightMin, heightMax), transform.localPosition.z);
+
         if (!isPressed && GetValue() + threshold >= 1)
         {
             Pressed();
@@ -37,6 +41,8 @@ public class PhysicsButton : MonoBehaviour
 
         if (Mathf.Abs(value) < deadZone)
             value = 0;
+
+        //Debug.Log(value);
 
         return Mathf.Clamp(value, -1f, 1f);
     }
